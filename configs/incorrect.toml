@@ -1,0 +1,9 @@
+name = "incorrect-research-smoke"
+backend = "fake"
+task_file = "../data/tasks/purchase.json"
+recovery = "none"
+
+[fault]
+kind = "incorrect_result"
+stage = "researcher"
+delta = 7

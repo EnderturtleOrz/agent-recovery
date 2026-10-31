@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mas-recovery"
+version = "0.1.0"
+description = "Dependency-aware failure propagation and recovery experiments on LangGraph"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.0,<2",
+    "pydantic>=2.10,<3",
+    "httpx>=0.28,<1",
+    "python-dotenv>=1,<2",
+]
+
+[project.optional-dependencies]
+sdk = ["openai>=2,<3"]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
+
+[project.scripts]
+mas-recovery = "mas_recovery.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mas_recovery"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

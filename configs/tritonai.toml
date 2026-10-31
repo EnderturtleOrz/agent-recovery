@@ -1,0 +1,4 @@
+name = "tritonai-clean-smoke"
+backend = "tritonai"
+task_file = "../data/tasks/purchase.json"
+recovery = "none"

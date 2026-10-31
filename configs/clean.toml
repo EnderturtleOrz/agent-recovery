@@ -1,0 +1,4 @@
+name = "clean-smoke"
+backend = "fake"
+task_file = "../data/tasks/purchase.json"
+recovery = "none"

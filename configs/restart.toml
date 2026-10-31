@@ -1,0 +1,9 @@
+name = "full-restart-smoke"
+backend = "fake"
+task_file = "../data/tasks/purchase.json"
+recovery = "full_restart"
+
+[fault]
+kind = "incorrect_result"
+stage = "researcher"
+delta = 7
