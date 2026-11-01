@@ -22,3 +22,4 @@ jobs:
       - run: uv run --no-sync ruff format --check .
       - run: uv run --no-sync python -m pytest
       - run: uv run --no-sync mas-recovery run --config configs/restart.toml
+      - run: uv run --no-sync mas-recovery suite --backend fake --overhead

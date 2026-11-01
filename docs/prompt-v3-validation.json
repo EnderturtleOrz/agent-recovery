@@ -1,0 +1,97 @@
+{
+  "prompt_version": "purchase-v3",
+  "tests_passed": 77,
+  "lint": "passed",
+  "format": "passed",
+  "real_model_runs": [
+    {
+      "run": "artifacts/5cc69c0f952040daabc5829f0f9ee7b2",
+      "task_class": "legacy",
+      "model": "api-glm-5.3-flash",
+      "prompt_version": "purchase-v3",
+      "source_sha256": "3b08e4ceccc756b525fa242a4bd52bc35c430ca210ede128b9503bd08fbaf4f1",
+      "status": "completed",
+      "final_correct": true,
+      "usage": {
+        "stage_calls": 3,
+        "model_calls": 3,
+        "input_tokens": 331,
+        "known_input_tokens": 331,
+        "unknown_input_tokens_calls": 0,
+        "output_tokens": 38,
+        "known_output_tokens": 38,
+        "unknown_output_tokens_calls": 0
+      },
+      "stage_values": {
+        "researcher": 10,
+        "planner": 30,
+        "executor": 30
+      },
+      "prompt_modes": [
+        "scalar",
+        "scalar",
+        "scalar"
+      ]
+    },
+    {
+      "run": "artifacts/1e974050cbb640a4b950645a3fbd46ab",
+      "task_class": "legacy",
+      "model": "api-glm-5.3-flash",
+      "prompt_version": "purchase-v3",
+      "source_sha256": "3b08e4ceccc756b525fa242a4bd52bc35c430ca210ede128b9503bd08fbaf4f1",
+      "status": "completed",
+      "final_correct": true,
+      "usage": {
+        "stage_calls": 3,
+        "model_calls": 3,
+        "input_tokens": 331,
+        "known_input_tokens": 331,
+        "unknown_input_tokens_calls": 0,
+        "output_tokens": 34,
+        "known_output_tokens": 34,
+        "unknown_output_tokens_calls": 0
+      },
+      "stage_values": {
+        "researcher": 10,
+        "planner": 30,
+        "executor": 30
+      },
+      "prompt_modes": [
+        "scalar",
+        "scalar",
+        "scalar"
+      ]
+    },
+    {
+      "run": "artifacts/2bf6e7931ab2418bba9e288cd66b4074",
+      "task_class": "feasible",
+      "model": "api-glm-5.3-flash",
+      "prompt_version": "purchase-v3",
+      "source_sha256": "3b08e4ceccc756b525fa242a4bd52bc35c430ca210ede128b9503bd08fbaf4f1",
+      "status": "completed",
+      "final_correct": true,
+      "usage": {
+        "stage_calls": 3,
+        "model_calls": 3,
+        "input_tokens": 1643,
+        "known_input_tokens": 1643,
+        "unknown_input_tokens_calls": 0,
+        "output_tokens": 512,
+        "known_output_tokens": 512,
+        "unknown_output_tokens_calls": 0
+      },
+      "stage_values": {
+        "researcher": 0,
+        "planner": 330,
+        "executor": 330
+      },
+      "prompt_modes": [
+        "structured",
+        "structured",
+        "structured"
+      ]
+    }
+  ],
+  "total_actual_model_calls": 9,
+  "scope": "Two scalar baselines and one structured baseline; not a full fault benchmark."
+}

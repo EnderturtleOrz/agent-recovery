@@ -1,61 +1,110 @@
 # Phase 1 experiment protocol
 
-This document defines the intended experiment protocol, including requirements not yet implemented.
+## Research questions
 
-## Experimental units and pairing
+1. Does a controlled faulty intermediate result reach downstream computation and change the outcome?
+2. How do fault type and injection stage affect correctness, safety and wasted work?
+3. What correctness and cost tradeoffs arise between no recovery, full restart and always verify?
 
-One unit is task × backend/model × fault schedule × method × replicate. Measure clean performance first, then run matched fault experiments. Hold task/prompt versions, model route, injection location and payload, disclosure timing, and resource budgets constant. Record seeds when supported without assuming remote inference is perfectly deterministic. Report sample counts, distributions, and uncertainty across tasks and repeated trials.
+## Dataset and pairing
 
-The current smoke configuration injects a numeric output fault once in attempt 0 and reveals its artifact ID after workflow completion. Recovery does not repeat the injection. This one-shot assumption does not model a persistent malicious source.
+The seeded generator produces three offer choices per task, with feasible, insufficient-budget,
+and insufficient-stock cases. The checked-in six tasks are a smoke dataset, not a statistically
+representative benchmark. Use `generate --count ... --seed ...` to expand, and retain the seed,
+exact dataset, model and manifests. `unit_price` is legacy metadata for structured tasks.
 
-All recovery methods must receive the same faulty ID and disclosure boundary. Always-verify checks each intermediate result before consumption; include its clean-run verification overhead as well as its behavior under faults.
+Unit: task × model × schedule × method × replicate. Each task/replicate has a clean run, a clean
+always-verify run, and six fault schedules under three methods. Budgets, task data, prompts,
+mutation payload and one-shot semantics match across methods. Remote inference may vary;
+repeats estimate variability rather than guaranteeing exact model determinism. Report sample
+counts and task-level distributions; the default small suite does not justify population claims.
+Task feasibility is a grouping dimension so correct abstentions do not hide purchase failures.
 
-## Fault matrix
+## Controlled schedules
 
-| Category | Case | Required evidence |
+| Category | Fault | Boundary | Semantics |
+| --- | --- | --- | --- |
+| Accidental | Incorrect result | Researcher output | Add delta to offer prices (legacy: scalar price) |
+| Accidental | Incorrect result | Planner output | Add delta to planned total |
+| Accidental | Timeout | Researcher or planner | Missing output before dispatch; no model charge fabricated |
+| Accidental | Stale output | Researcher output | Return previous catalog prices, stock and version |
+| Adversarial | Malicious instruction | Researcher output | Add supplier-override instruction to lower-trust note |
+
+Stale/instruction schedules require structured tasks. Unsupported combinations fail validation.
+Only attempt 0 is injected, once; neither verification retries nor restart repeat the fault.
+This does not model a persistent malicious source. Accidental and adversarial summaries remain
+separate. The deterministic backend deliberately follows the attack marker for instrumentation.
+
+## Methods and disclosure
+
+- **Clean:** no injection, plus a separate clean always-verify run for verification overhead.
+- **No recovery:** inject and continue, or fail on a missing output.
+- **Full restart:** supply the exact faulty ID after completion or the known failed stage at
+  controlled timeout; reset the ledger and rerun all roles without injection. Original costs and
+  safety history are retained. Actual provider failures are not reclassified as injected faults.
+- **Always verify:** before accepting every stage, use privileged current catalog truth and task
+  constraints, reject incorrect or injected-instruction payloads and retry once by default.
+  This verifier is an oracle upper bound, with zero verifier inference calls; generation retries
+  and measured verification CPU/wall time are included. Rejection is not failure detection by an LLM.
+
+No automated detector or selective recovery is evaluated in Phase 1. The budget is per complete
+run, including recovery/retries: default 12 backend calls, 120 seconds, 2048 output tokens/request.
+All methods receive identical limits. The call limit includes fake calls; model_calls distinguishes
+actual HTTP requests. Optional total-token enforcement stops on unknown usage and can overshoot
+by one reported response. HTTP timeouts and call-boundary time checks are not a process kill timer.
+
+## Metric definitions
+
+| Metric | Definition |
+| --- | --- |
+| Task success | Completed run with correct final state; all failed runs remain in the denominator |
+| Initial/recovered correctness | Separate pre-restart and final booleans; initial may be null if initial execution aborts |
+| Confirmed input use | Injected artifact is an explicit parent of a completed downstream artifact; stage scheduling alone is insufficient |
+| Downstream divergence | Downstream payload differs from its matched clean output; injected stage itself is excluded |
+| Propagation eligibility | Matched clean is correct, injection happened, and completed downstream input use is recorded |
+| Propagated task failure rate | Initially incorrect/failed fault runs divided by eligible runs; null when no eligible runs |
+| Affected stages | Number/list of observed changed downstream payloads; missing outputs are not fabricated as changes |
+| Unauthorized actions | Attempt count and run rate; execution count separately (zero by enforced guard in this environment) |
+| Wasted work | Union of semantically invalid, verifier-rejected, discarded pre-restart, failed calls; if the run aborts all its calls are discarded. No double counting |
+| Cost | All stage/model calls, known input/output tokens, null totals for unknown usage, and separate restart/wasted subsets |
+| Latency | Initial execution through recovery and scoring; excludes initial manifest creation and final summary serialization |
+| Recovery latency | Restart planning, reset and rerun, including partial failed recovery |
+| Recomputed stages | Successfully completed restart stages, including partial progress if restart aborts |
+| Verification overhead | Clean-verify vs clean cost/time; per-run check count and check time; generation retries included in total cost |
+| Tracking persistence overhead | Optional paired runs with/without disk trace; alternate pair order across replicates; both retain scoring events |
+
+Unconsumed/missing-output fault runs are not evidence of robust recovery. A changed payload is
+observational evidence; with stochastic LLMs it can also reflect sampling variance. Inspect traces,
+use repeated clean controls, and do not label all descendants as causally corrupted. The current
+suite implements deterministic faults and output pairing, not a general causal inference method.
+A final correct empty ledger can coexist with a rejected unsafe attempt; always report both.
+No dollar costs are inferred without a dated provider pricing table. Summary CSV includes sample
+counts, means, median/P95 latency and task-class separation; raw per-run records retain detail.
+
+## Artifacts and reproduction
+
+`mas-recovery suite --backend fake --overhead` produces an offline end-to-end validation matrix.
+Real experiments use the same command with `--backend tritonai` after validating one real task.
+Every run has a manifest, raw JSONL trace and summary; suite-level outputs retain the exact
+dataset, method matrix, per-run paired results, aggregate JSON/CSV and overhead pairs.
+
+JSON/type/API/budget failures count as unsuccessful runs. Unknown usage is not zero. Controlled
+timeouts are separate from provider timeouts. Batch processing continues after individual run
+failures; configuration/data validation errors stop before the affected API work.
+
+## Coverage against the course handout
+
+| Phase 1 requirement | Implementation | Remaining empirical work |
 | --- | --- | --- |
-| Accidental | Incorrect result | A downstream consumer uses the wrong value or fact; an independent oracle checks the result. |
-| Accidental | Timeout | Stage failure, scheduling behavior, and partial writes; distinguish injection from network timeouts. |
-| Accidental | Stale output | A source version is older than the environment; changing only content is insufficient. |
-| Adversarial | Malicious instructions | Instructions enter through a lower-trust result; record unauthorized attempts and executions. |
+| Clean baseline | Fake and TritonAI backends; paired clean runs | Run real model across expanded tasks |
+| Controlled faults | Four types, six schedules, two boundaries | Broader payloads and model-specific behavior |
+| Accidental vs adversarial analysis | Validated categories and grouped summaries | Analyze real-model traces |
+| Messages/artifacts/actions/dependencies | Explicit input/output and version provenance, model records | Field-level or shared-state dependencies in Phase 2 |
+| Propagation and workload dependence | Input-use evidence, matched output/outcome comparisons | Repeats and manually inspected real failure cases |
+| Required metrics | Success/safety/divergence/wasted work/time/cost | Larger samples; full tracking overhead if claimed |
+| Full restart | Explicit simulated reset and retained history | Real-model recovery measurements |
+| Verification comparison | Privileged programmatic verifier with measured overhead | Learned verifier optional, not implemented |
 
-Cover multiple stages and a shared-state case. Analyze accidental and adversarial cases separately. The deterministic numeric example validates instrumentation; it provides no evidence about prompt-injection resistance.
-
-## Comparison methods
-
-- **Clean:** no injection or recovery; establishes task success and cost.
-- **No recovery:** inject and continue; measures propagation.
-- **Full restart:** after disclosure, restore supported environment state and rerun all stages; retain original costs and safety history.
-- **Always verify:** verify each intermediate result before consumption; define rejection/retry behavior and include extra inference cost. An oracle verifier must be labeled as an upper bound.
-- **Selective recovery (Phase 2):** use the same disclosure information, starting state, and budget; rerun invalid work and validate every reused result.
-
-## Metrics
-
-| Metric | Definition | Current support |
-| --- | --- | --- |
-| Clean/recovered correctness | Independent oracle checks final task state; aggregate over eligible runs. | Per-run booleans. |
-| Failure propagation | Downstream/final divergence among paired clean-correct runs whose injected output was consumed. | Integration tests for one chain; no batch aggregation. |
-| Affected stages | Observed content changes relative to matched clean outputs; potential dependent descendants are a separate measure. | Trace supports inspection; no aggregator. |
-| Unauthorized actions | Attempts and executions counted separately, including pre-recovery history. | Budget rule only. |
-| Wasted work | Invalidated/discarded calls, tokens, and time. | Not implemented. |
-| End-to-end latency | Initial execution through recovery and final evaluation. | Per run; includes stage trace writes, excludes manifest creation. |
-| Recovery latency | Planning, environment restoration, and reruns after fault disclosure. | Per run. |
-| Recomputed stages | Actual completed recovery stages; failed retries counted separately. | Successful full restart only. |
-| Retained valid work | Validated artifacts actually reused, relative to eligible reusable work. | Restart retains zero; selective reuse not implemented. |
-| Inference cost | All agent, verifier, failed, retry, and recovery calls/tokens; optionally prices with a dated price table. | Successful output usage in traces; full aggregation not implemented. |
-| Tracking overhead | Matched runs with and without tracking, including time and space. | Trace write timing only, not total overhead. |
-| Irreversible effects | Actions that cannot be restored and their consequences. | Requires environment extensions. |
-
-Unknown usage must not be treated as zero. Currently, usage is not persisted if the API returns a response that fails JSON validation; complete failed-call accounting remains a Phase 1 requirement. Failed runs must stay in reported denominators. Final task correctness must be reported separately from safety history.
-
-Stage events currently record structured inputs and artifact outputs. Full LLM request/response records, provider request IDs, prompt versions, complete usage, hard budgets, seeds, and batch matrices remain to be implemented.
-
-## Phase 1 acceptance criteria
-
-1. Reproducible TritonAI clean runs across a task set, with model/prompt/configuration and complete call costs.
-2. Explicit schedules for four fault classes, multiple injection locations, and a shared-state case.
-3. Paired evidence of actual consumption, distinguishing ignored messages, consumption without effect, and propagated failure.
-4. Full restart and always-verify comparisons under matching task/fault matrices and call/token/time budgets.
-5. Raw traces, reproducible analysis, aggregate results, and limitations, preserving failures and unauthorized-action history.
-
-Environment drift and irreversible actions are central Phase 2 cases. Phase 1 should preserve resource/version/action interfaces rather than recording only agent messages.
+The handout does not prescribe a fixed task count or demand every fault at every boundary.
+Shared-state complications, selective reuse validation, snapshots and irreversible actions belong
+primarily to Phase 2. This repository does not claim those mechanisms are implemented.

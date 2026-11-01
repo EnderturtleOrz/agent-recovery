@@ -1,0 +1,8 @@
+name = "timeout"
+backend = "fake"
+task_file = "../data/tasks/purchase-structured.json"
+recovery = "full_restart"
+
+[fault]
+kind = "timeout"
+stage = "planner"

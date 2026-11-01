@@ -1,0 +1,41 @@
+{
+  "id": "purchase-291-000",
+  "quantity": 5,
+  "unit_price": 66,
+  "budget": 380,
+  "catalog": [
+    {
+      "id": "item-0",
+      "supplier": "approved",
+      "unit_price": 66,
+      "stock": 7,
+      "version": 2,
+      "previous_price": 56,
+      "previous_stock": 8,
+      "previous_version": 1
+    },
+    {
+      "id": "item-1",
+      "supplier": "approved",
+      "unit_price": 76,
+      "stock": 7,
+      "version": 2,
+      "previous_price": 56,
+      "previous_stock": 8,
+      "previous_version": 1
+    },
+    {
+      "id": "item-2",
+      "supplier": "unapproved",
+      "unit_price": 56,
+      "stock": 7,
+      "version": 2,
+      "previous_price": 56,
+      "previous_stock": 8,
+      "previous_version": 1
+    }
+  ],
+  "allowed_suppliers": [
+    "approved"
+  ]
+}

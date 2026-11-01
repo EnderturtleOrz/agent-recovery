@@ -1,0 +1,4 @@
+name = "structured"
+backend = "fake"
+task_file = "../data/tasks/purchase-structured.json"
+recovery = "none"

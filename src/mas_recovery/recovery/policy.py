@@ -14,11 +14,17 @@ class RecoveryPlan:
 
 
 class RecoveryPolicy(Protocol):
-    def plan(self, faulty_id: str, artifacts: tuple[Artifact, ...]) -> RecoveryPlan: ...
+    def plan(
+        self, faulty_id: str, artifacts: tuple[Artifact, ...], failed_stage: Stage | None = None
+    ) -> RecoveryPlan: ...
 
 
 class FullRestart:
-    def plan(self, faulty_id: str, artifacts: tuple[Artifact, ...]) -> RecoveryPlan:
-        if faulty_id not in {artifact.id for artifact in artifacts}:
+    def plan(
+        self, faulty_id: str, artifacts: tuple[Artifact, ...], failed_stage: Stage | None = None
+    ) -> RecoveryPlan:
+        if faulty_id not in {artifact.id for artifact in artifacts} and not (
+            failed_stage is not None and faulty_id == f"attempt-0:{failed_stage}"
+        ):
             raise ValueError("Faulty artifact must belong to the supplied attempt.")
         return RecoveryPlan(("researcher", "planner", "executor"), (), True)

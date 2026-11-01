@@ -1,0 +1,8 @@
+name = "verify"
+backend = "fake"
+task_file = "../data/tasks/purchase-structured.json"
+recovery = "always_verify"
+
+[fault]
+kind = "incorrect_result"
+stage = "researcher"
