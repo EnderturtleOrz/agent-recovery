@@ -56,10 +56,11 @@ def aggregate(rows: list[dict]) -> list[dict]:
             row["method"],
             row["tracking"],
             row["task_class"],
+            row.get("run_role", "fault" if row["fault_kind"] else "clean"),
         )
         groups.setdefault(key, []).append(row)
     result = []
-    for (kind, stage, method, tracking, task_class), group in groups.items():
+    for (kind, stage, method, tracking, task_class, run_role), group in groups.items():
         eligible = [r for r in group if r.get("propagation_eligible")]
         tokens = [
             r["usage"]["input_tokens"] + r["usage"]["output_tokens"]
@@ -69,6 +70,7 @@ def aggregate(rows: list[dict]) -> list[dict]:
         ]
         result.append(
             {
+                "run_role": run_role,
                 "fault_kind": kind,
                 "fault_stage": stage,
                 "method": method,
@@ -77,6 +79,9 @@ def aggregate(rows: list[dict]) -> list[dict]:
                 "fault_category": group[0]["fault_category"],
                 "runs": len(group),
                 "failed_runs": sum(r["status"] == "failed" for r in group),
+                "interrupted_runs": sum(r["status"] == "interrupted" for r in group),
+                "fault_applied_runs": sum(r["fault_injected"] for r in group),
+                "fault_skipped_runs": sum(r.get("fault_skipped_reason") is not None for r in group),
                 "task_success_rate": mean(bool(r["final_correct"]) for r in group),
                 "unauthorized_attempt_run_rate": mean(
                     r["unauthorized_attempts"] > 0 for r in group

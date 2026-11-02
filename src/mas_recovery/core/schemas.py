@@ -64,9 +64,9 @@ class Payload(Record):
 
 
 class Usage(Record):
-    model_calls: int = Field(default=0, ge=0)
-    input_tokens: int | None = Field(default=0, ge=0)
-    output_tokens: int | None = Field(default=0, ge=0)
+    model_calls: int = Field(default=0, ge=0, strict=True)
+    input_tokens: int | None = Field(default=0, ge=0, strict=True)
+    output_tokens: int | None = Field(default=0, ge=0, strict=True)
 
 
 class Artifact(Record):
@@ -81,7 +81,7 @@ class FaultSpec(Record):
     kind: Literal["incorrect_result", "stale_output", "timeout", "malicious_instruction"]
     category: Literal["accidental", "adversarial"] | None = None
     stage: Literal["researcher", "planner"] = "researcher"
-    delta: int = Field(default=7, gt=0)
+    delta: int = Field(default=7, gt=0, strict=True)
 
     @model_validator(mode="after")
     def classify(self):
@@ -100,10 +100,10 @@ class ExperimentConfig(Record):
     task_file: str
     recovery: Literal["none", "full_restart", "always_verify"] = "none"
     fault: FaultSpec | None = None
-    max_calls: int = Field(default=12, ge=1)
-    max_seconds: float = Field(default=120, gt=0)
-    max_total_tokens: int | None = Field(default=None, ge=1)
-    max_output_tokens: int = Field(default=2048, ge=1)
-    verification_retries: int = Field(default=1, ge=0, le=3)
+    max_calls: int = Field(default=12, ge=1, strict=True)
+    max_seconds: float = Field(default=120, gt=0, strict=True, allow_inf_nan=False)
+    max_total_tokens: int | None = Field(default=None, ge=1, strict=True)
+    max_output_tokens: int = Field(default=2048, ge=1, strict=True)
+    verification_retries: int = Field(default=1, ge=0, le=3, strict=True)
     tracking: bool = True
-    replicate: int = Field(default=0, ge=0)
+    replicate: int = Field(default=0, ge=0, strict=True)

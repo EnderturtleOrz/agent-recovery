@@ -2,13 +2,16 @@
 
 from time import perf_counter
 
-from mas_recovery.agents.backend import ModelCallError
+from mas_recovery.agents.backend import ModelCallError, ModelCallInterrupted
 from mas_recovery.core.schemas import ExperimentConfig, Usage
 from mas_recovery.tracking.trace import Trace
 
 
 class BudgetExceeded(RuntimeError):
-    pass
+    def __init__(self, resource: str, *, phase: str = "admission"):
+        self.resource = resource
+        self.phase = phase
+        super().__init__(f"{resource} budget prevents {phase}")
 
 
 class Meter:
@@ -17,15 +20,20 @@ class Meter:
         self.started = perf_counter()
         self.calls = 0
         self.known_tokens = 0
+        self.usage_unknown = False
 
-    def check(self):
+    def check(self, *, before_call: bool = True):
+        phase = "admission" if before_call else "completion"
         if perf_counter() - self.started >= self.config.max_seconds:
-            raise BudgetExceeded("time")
-        if (
-            self.config.max_total_tokens is not None
-            and self.known_tokens >= self.config.max_total_tokens
-        ):
-            raise BudgetExceeded("tokens")
+            raise BudgetExceeded("time", phase=phase)
+        limit = self.config.max_total_tokens
+        if limit is not None:
+            if self.usage_unknown:
+                raise BudgetExceeded("unknown_tokens", phase=phase)
+            # Consuming exactly the allowance is valid; only another call is forbidden.
+            exhausted = self.known_tokens >= limit if before_call else self.known_tokens > limit
+            if exhausted:
+                raise BudgetExceeded("tokens", phase=phase)
 
     def call(self, backend, stage, inputs, artifact_id, attempt):
         self.check()
@@ -43,6 +51,11 @@ class Meter:
         status, error_type = "completed", None
         try:
             payload, usage = backend.generate(stage, inputs)
+        except KeyboardInterrupt as error:
+            status, error_type = "interrupted", "KeyboardInterrupt"
+            if isinstance(error, ModelCallInterrupted):
+                usage = error.usage
+            raise
         except Exception as error:
             status = "failed"
             error_type = (
@@ -53,6 +66,7 @@ class Meter:
             raise
         finally:
             self.known_tokens += (usage.input_tokens or 0) + (usage.output_tokens or 0)
+            self.usage_unknown |= usage.input_tokens is None or usage.output_tokens is None
             self.trace.emit(
                 "call_finished",
                 stage=stage,
@@ -64,9 +78,5 @@ class Meter:
                 latency_seconds=perf_counter() - started,
                 model_record=getattr(backend, "last_record", None),
             )
-        if self.config.max_total_tokens is not None and (
-            usage.input_tokens is None or usage.output_tokens is None
-        ):
-            raise BudgetExceeded("unknown token usage prevents token-budget enforcement")
-        self.check()
+        self.check(before_call=False)
         return payload, usage

@@ -7,7 +7,7 @@ from typing import Any
 import httpx
 from pydantic import Field
 
-from mas_recovery.agents.backend import ModelCallError
+from mas_recovery.agents.backend import ModelCallError, ModelCallInterrupted
 from mas_recovery.core.schemas import Payload, Record, Stage, Usage
 
 PROMPT_VERSION = "purchase-v3"
@@ -51,6 +51,10 @@ INSTRUCTIONS = {
         ),
     },
 }
+
+
+class IncompleteModelResponse(ValueError):
+    """A provider did not finish a normal response; valid-looking JSON is insufficient."""
 
 
 class ScalarResponse(Record):
@@ -121,12 +125,20 @@ class TritonAIBackend:
                 input_tokens=reported.get("prompt_tokens"),
                 output_tokens=reported.get("completion_tokens"),
             )
-            content = body["choices"][0]["message"]["content"]
+            choice = body["choices"][0]
+            content = choice["message"]["content"]
             self.last_record["response_content"] = content
+            finish_reason = choice.get("finish_reason")
+            self.last_record["finish_reason"] = finish_reason
+            # Missing metadata is accepted for compatible endpoints; explicit failure is not.
+            if finish_reason not in (None, "stop"):
+                raise IncompleteModelResponse("Provider did not complete a normal response")
             # Do not silently repair malformed output or issue uncounted retries.
             parsed = response_type.model_validate_json(content)
             payload = Payload(value=parsed.value) if mode == "scalar" else parsed
             return payload, usage
+        except KeyboardInterrupt:
+            raise ModelCallInterrupted(usage) from None
         except Exception as error:
             raise ModelCallError(type(error).__name__, usage) from None
 

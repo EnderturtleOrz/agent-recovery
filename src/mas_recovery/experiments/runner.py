@@ -16,7 +16,7 @@ from mas_recovery.agents.tritonai import INSTRUCTIONS, PROMPT_VERSION
 from mas_recovery.core.schemas import Artifact, ExperimentConfig, Payload, Task
 from mas_recovery.environment.simulated import SimulatedWorld
 from mas_recovery.evaluation.oracle import feasible, task_correct, verify_payload
-from mas_recovery.experiments.meter import Meter
+from mas_recovery.experiments.meter import BudgetExceeded, Meter
 from mas_recovery.faults.injection import InjectedTimeout
 from mas_recovery.recovery.policy import FullRestart
 from mas_recovery.tracking.trace import Trace
@@ -62,13 +62,18 @@ def run_experiment(
     run_dir = output_root / uuid4().hex
     run_dir.mkdir(parents=True, exist_ok=False)
     trace = Trace(run_dir / "trace.jsonl", enabled=config.tracking)
-    revision = subprocess.run(
-        ["git", "rev-parse", "HEAD"],
-        cwd=Path(__file__).resolve().parents[3],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    try:
+        revision = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=Path(__file__).resolve().parents[3],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        git_commit = revision.stdout.strip() if revision.returncode == 0 else None
+    except OSError:
+        # Git is optional provenance metadata, not a runtime dependency.
+        git_commit = None
     task_json = json.dumps(task.model_dump(), sort_keys=True)
     source_root = Path(__file__).resolve().parents[1]
     source_hash = hashlib.sha256()
@@ -88,7 +93,7 @@ def run_experiment(
         "python": platform.python_version(),
         "langgraph": version("langgraph"),
         "model": model,
-        "git_commit": revision.stdout.strip() or None,
+        "git_commit": git_commit or None,
         "fault_schedule": (
             "one-shot attempt 0; identity disclosed at completion or injected timeout"
         ),
@@ -126,7 +131,11 @@ def run_experiment(
             summary["initial_correct"] = False
             if config.recovery != "full_restart":
                 raise
-        if config.recovery == "full_restart" and config.fault is not None:
+        if (
+            config.recovery == "full_restart"
+            and config.fault is not None
+            and any(e["event"] == "fault_injected" for e in trace.events)
+        ):
             faulty_id = f"attempt-0:{config.fault.stage}"
             artifacts = [
                 Artifact.model_validate(e["artifact"])
@@ -151,10 +160,19 @@ def run_experiment(
             finally:
                 summary["recovery_seconds"] = perf_counter() - recovery_start
         summary.update(status="completed", final_correct=task_correct(task, world))
+    except KeyboardInterrupt as error:
+        trace.emit("run_interrupted", error_type="KeyboardInterrupt")
+        summary.update(status="interrupted", error_type="KeyboardInterrupt", final_correct=False)
+        # The suite can journal this run before propagating the user's interrupt.
+        error.run_dir = run_dir
+        raise
     except Exception as error:
         error_type = error.error_type if isinstance(error, ModelCallError) else type(error).__name__
         trace.emit("run_failed", error_type=error_type)
         summary.update(status="failed", error_type=error_type, final_correct=False)
+        if isinstance(error, BudgetExceeded):
+            summary.update(budget_resource=error.resource, budget_phase=error.phase)
+            trace.emit("budget_exceeded", resource=error.resource, phase=error.phase)
         if raise_errors:
             raise
     finally:
@@ -178,7 +196,7 @@ def run_experiment(
             if (restarting and e["attempt"] == 0)
             or e["artifact_id"] in rejected | invalid_ids
             or e["status"] == "failed"
-            or summary["status"] == "failed"
+            or summary["status"] in ("failed", "interrupted")
         ]
         injected = [e for e in events if e["event"] == "fault_injected"]
         faulty_ids = {e["artifact_id"] for e in injected}
@@ -190,8 +208,14 @@ def run_experiment(
             elapsed_seconds=perf_counter() - started,
             trace_write_seconds=trace.write_seconds,
             unauthorized_attempts=world.unauthorized_attempts,
-            unauthorized_executed=0,
+            unauthorized_executed=sum(
+                e["event"] == "tool_action" and not e["authorized"] and e["executed"]
+                for e in events
+            ),
             fault_injected=bool(injected),
+            fault_skipped_reason=next(
+                (e["reason"] for e in events if e["event"] == "fault_not_injected"), None
+            ),
             injected_result_consumed=consumed,
             recomputed_stages=sum(
                 e["event"] == "artifact_created" and e["attempt"] > 0 for e in events

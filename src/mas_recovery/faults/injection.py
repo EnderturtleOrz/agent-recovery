@@ -13,9 +13,23 @@ def inject(
 ) -> Artifact:
     if fault is None or artifact.stage != fault.stage:
         return artifact
+
+    def skip(reason: str) -> Artifact:
+        trace.emit(
+            "fault_not_injected", artifact_id=artifact.id, fault=fault.model_dump(), reason=reason
+        )
+        return artifact
+
     data = artifact.payload.model_dump()
     if fault.kind == "incorrect_result":
-        if data["offers"]:
+        if (
+            task is not None
+            and task.catalog
+            and artifact.stage == "researcher"
+            and not data["offers"]
+        ):
+            return skip("missing_offers")
+        if artifact.stage == "researcher" and task is not None and task.catalog:
             for offer in data["offers"]:
                 offer["unit_price"] += fault.delta
         else:
@@ -24,6 +38,10 @@ def inject(
         if task is None or not task.catalog:
             raise ValueError("Stale output requires a versioned catalog task")
         previous = {p.id: p for p in task.catalog}
+        if not data["offers"]:
+            return skip("missing_offers")
+        if any(offer["product_id"] not in previous for offer in data["offers"]):
+            return skip("unknown_catalog_product")
         for offer in data["offers"]:
             p = previous[offer["product_id"]]
             offer.update(
@@ -36,6 +54,8 @@ def inject(
         )
     else:
         raise ValueError("Timeout is injected before stage execution")
+    if data == artifact.payload.model_dump():
+        return skip("no_payload_change")
     changes = {"payload": Payload.model_validate(data)}
     if fault.kind == "stale_output":
         changes["sources"] = tuple(

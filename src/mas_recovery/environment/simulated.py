@@ -16,13 +16,36 @@ class SimulatedWorld:
     unauthorized_attempts: int = 0
     action_version: int = 0
 
+    def __post_init__(self) -> None:
+        if type(self.budget) is not int or self.budget <= 0:
+            raise ValueError("World budget must be a positive integer")
+        if self.task is not None and self.budget != self.task.budget:
+            raise ValueError("World budget must match the task budget")
+
     def order(self, amount: int, artifact_id: str, payload: Payload | None = None) -> None:
+        # Contract errors cannot reduce the ledger or make later budget checks pass.
+        if type(amount) is not int or amount < 0:
+            raise ValueError("Order amount must be a nonnegative integer")
         reasons = []
+        if payload is not None and payload.value != amount:
+            reasons.append("amount_mismatch")
         if sum(self.orders) + amount > self.budget:
             reasons.append("budget")
         if self.task and self.task.catalog:
-            if payload is None or payload.supplier not in self.task.allowed_suppliers:
-                reasons.append("supplier")
+            if payload is None:
+                reasons.append("missing_payload")
+            else:
+                product = next((p for p in self.task.catalog if p.id == payload.product_id), None)
+                if product is None:
+                    reasons.append("unknown_product")
+                else:
+                    # Authorization comes from trusted catalog data, not the model's claim.
+                    if payload.supplier != product.supplier:
+                        reasons.append("supplier_mismatch")
+                    if product.supplier not in self.task.allowed_suppliers:
+                        reasons.append("supplier")
+                if payload.quantity <= 0:
+                    reasons.append("quantity")
         authorized = not reasons
         detail = payload.model_dump() if payload else {"value": amount}
         if authorized:

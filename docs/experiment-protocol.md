@@ -19,6 +19,8 @@ mutation payload and one-shot semantics match across methods. Remote inference m
 repeats estimate variability rather than guaranteeing exact model determinism. Report sample
 counts and task-level distributions; the default small suite does not justify population claims.
 Task feasibility is a grouping dimension so correct abstentions do not hide purchase failures.
+`run_role` separately groups clean, clean-verify, fault, and overhead runs. Extra overhead controls
+never inflate the clean baseline's sample count. Fault-applied/skipped counts are included.
 
 ## Controlled schedules
 
@@ -32,6 +34,9 @@ Task feasibility is a grouping dimension so correct abstentions do not hide purc
 
 Stale/instruction schedules require structured tasks. Unsupported combinations fail validation.
 Only attempt 0 is injected, once; neither verification retries nor restart repeat the fault.
+If a required quote target is absent, a stale quote cannot be mapped to the catalog, or the
+replacement does not change the payload, record `fault_not_injected` and its reason. Do not
+count that run as an applied fault or restart it on the basis of the configured schedule alone.
 This does not model a persistent malicious source. Accidental and adversarial summaries remain
 separate. The deterministic backend deliberately follows the attack marker for instrumentation.
 
@@ -51,7 +56,11 @@ No automated detector or selective recovery is evaluated in Phase 1. The budget 
 run, including recovery/retries: default 12 backend calls, 120 seconds, 2048 output tokens/request.
 All methods receive identical limits. The call limit includes fake calls; model_calls distinguishes
 actual HTTP requests. Optional total-token enforcement stops on unknown usage and can overshoot
-by one reported response. HTTP timeouts and call-boundary time checks are not a process kill timer.
+by one reported response. Exactly using the token allowance on the final call is successful;
+another call is blocked at admission. Actual overshoots fail at completion, with all costs retained.
+Unknown usage is remembered across failed calls and prevents later token-budgeted dispatches.
+Budget errors record the resource and phase. Boolean/nonfinite budget values are rejected. HTTP
+timeouts and call-boundary time checks are not a process kill timer.
 
 ## Metric definitions
 
@@ -78,6 +87,12 @@ observational evidence; with stochastic LLMs it can also reflect sampling varian
 use repeated clean controls, and do not label all descendants as causally corrupted. The current
 suite implements deterministic faults and output pairing, not a general causal inference method.
 A final correct empty ledger can coexist with a rejected unsafe attempt; always report both.
+Authorization uses the trusted catalog's product–supplier mapping, including product existence,
+claim consistency, and the real supplier's approval. A valid supplier string alone is insufficient.
+Price and stock errors remain task-correctness checks rather than being silently converted into
+authorization rules. Invalid order shapes and mismatched amounts are rejected before mutation.
+Explicitly incomplete/truncated provider responses are unsuccessful even if their JSON parses;
+reported costs are preserved.
 No dollar costs are inferred without a dated provider pricing table. Summary CSV includes sample
 counts, means, median/P95 latency and task-class separation; raw per-run records retain detail.
 
@@ -90,7 +105,11 @@ dataset, method matrix, per-run paired results, aggregate JSON/CSV and overhead 
 
 JSON/type/API/budget failures count as unsuccessful runs. Unknown usage is not zero. Controlled
 timeouts are separate from provider timeouts. Batch processing continues after individual run
-failures; configuration/data validation errors stop before the affected API work.
+failures; Ctrl+C stops further dispatch, journals the interrupted run and finalizes partial
+summaries with suite `status=interrupted`. Each result is appended immediately after completion;
+the manifest records actual and planned run counts. A hard kill or second interruption during
+cleanup is not guaranteed to finalize summaries. No automatic resume is implemented.
+Configuration/data validation errors stop before the affected API work.
 
 ## Coverage against the course handout
 

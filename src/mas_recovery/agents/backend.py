@@ -16,6 +16,14 @@ class ModelCallError(RuntimeError):
         self.usage = usage
 
 
+class ModelCallInterrupted(KeyboardInterrupt):
+    """Preserve known usage while allowing Ctrl+C to stop the entire experiment."""
+
+    def __init__(self, usage: Usage):
+        super().__init__()
+        self.usage = usage
+
+
 class FakeBackend:
     """Deterministic propagation fixture; deliberately follows the attack marker."""
 

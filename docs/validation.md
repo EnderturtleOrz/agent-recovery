@@ -1,5 +1,51 @@
 # Validation record
 
+## Experiment execution and README review
+
+- 132 tests passed, including 12 new regression cases for stage-specific numeric injection,
+  independent baseline/overhead groups, interruption accounting and backend overrides.
+- The final 264-run offline matrix completed with 24 expected no-recovery injected timeouts and
+  zero unexpected execution failures. Primary clean controls: 12; clean verification: 12;
+  scheduled fault runs: 216; separate overhead controls: 24.
+- Real SIGINT was sent to an offline CLI subprocess: it stopped further dispatch, exited
+  with code 130 and retained one finished run plus the interrupted run and partial summaries.
+- The README's seven single-run experiment commands were each exercised with `--backend fake`.
+  All configs loaded and ran; the two full-suite command counts were checked against the matrix.
+- Artifact dependencies, trusted authorization, ledger replay, source hashes and CSV aggregation
+  were audited. No real model API requests were made in this review.
+
+Evidence: [experiment-review-validation.json](experiment-review-validation.json).
+Raw matrix: [summary.csv](../artifacts/experiment-review-validation/suite-a9089f77a4b348aea0e86a06e7f71c85/summary.csv).
+Ctrl+C evidence: [partial suite](../artifacts/experiment-review-sigint/suite-abeb38a937644c8099a58daa54ca2129/suite-manifest.json).
+Earlier records below refer to their respective historical source hashes.
+
+## Authorization and budget boundary regression checks
+
+The PR review identified a supplier-claim bypass and rejection of an exactly-at-limit final
+token response. Both were reproduced before fixing. Trusted catalog authorization now checks
+product existence, actual supplier approval and claim consistency. Token checks distinguish
+admission from completion: equality accepts the completed result and prohibits another call.
+
+Related checks cover malformed order inputs, cumulative budget/reset, sticky unknown token
+usage after failure, real execution-counter derivation, nonfinite/boolean numeric limits,
+incomplete provider finish reasons, optional Git metadata and unapplied/no-op fault schedules.
+Price and stock correctness remain separate oracle checks so numeric propagation experiments
+retain their meaning.
+
+- All **120 tests** passed (43 new boundary regression cases); lint, formatting, whitespace and
+  locked-environment dependency checks passed.
+- The complete 264-run offline matrix was rerun: 240 completed, 24 expected no-recovery injected
+  timeouts, and zero unexpected execution failures. Full restart was correct in 72/72 runs;
+  always-verify (including clean controls) was correct in 84/84 runs.
+- Independent artifact audit checked trusted supplier mapping, ledger replay, historical safety
+  counts, downstream parent inputs, source hashes, aggregate JSON and every CSV cell.
+- A live baseline was attempted, but preflight found no `.env`, model setting or API key in the
+  execution environment. No provider request was made; real-provider regression is not claimed.
+
+Machine-readable evidence: [boundary-validation.json](boundary-validation.json).
+Raw local suite: [summary.csv](../artifacts/boundary-validation/suite-3fc132e651944af9aa02ef120f50eed0/summary.csv).
+Earlier validation records below remain historical.
+
 ## Prompt-v3 regression and real-provider checks
 
 After a real scalar baseline returned 0 instead of 30, scalar and structured tasks were
