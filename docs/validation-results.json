@@ -1,0 +1,39 @@
+{
+  "test_count": 66,
+  "test_result": "passed",
+  "python": "3.12.10",
+  "locked_environment": true,
+  "dependency_check": "48 packages compatible",
+  "lint": "passed",
+  "format": "passed",
+  "git_diff_check": "passed",
+  "offline_suite": "artifacts/validation/suite-d3b7353d490f47b39156ebb4a6251793",
+  "source_sha256": "9117e39876b26355c24b31e3d0686418e865d6121f1d8c5f3915e25d624245f3",
+  "runs": 264,
+  "tasks": 6,
+  "replicates": 2,
+  "completed_runs": 240,
+  "expected_injected_timeout_failures": 24,
+  "unexpected_execution_failures": 0,
+  "full_restart_runs": 72,
+  "full_restart_correct": 72,
+  "always_verify_runs_including_clean": 84,
+  "always_verify_correct": 84,
+  "actual_model_calls": 0,
+  "audits": [
+    "JSON/CSV aggregation source verified",
+    "all tracked event sequences checked",
+    "all artifact parent references checked",
+    "downstream inputs matched to actual parent payloads",
+    "simulated ledger replay checked against final correctness",
+    "unauthorized history independently recounted",
+    "source hash matched for every run"
+  ],
+  "real_api_validation": "not run: no API key or repository .env available",
+  "limitations": [
+    "Fake backend deliberately follows synthetic attack marker; no model safety conclusion.",
+    "Always-verify uses privileged programmatic truth.",
+    "Controlled timeouts have no partial remote writes.",
+    "Disk tracing overhead is not total dependency bookkeeping overhead."
+  ]
+}

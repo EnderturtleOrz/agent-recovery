@@ -96,7 +96,7 @@ def test_failure_is_persisted_and_not_counted_as_success(tmp_path):
     run_dir = next(tmp_path.iterdir())
     summary, _ = read_run(run_dir)
     assert summary["status"] == "failed"
-    assert summary["final_correct"] is None
+    assert summary["final_correct"] is False
     assert "provider details" not in (run_dir / "trace.jsonl").read_text()
 
 
@@ -106,4 +106,5 @@ def test_checked_in_configs_load():
     root = Path(__file__).resolve().parents[2]
     for path in (root / "configs").glob("*.toml"):
         _, task = load_config(path)
-        assert task.id == "purchase-001"
+        assert task.quantity > 0
+        assert task.budget > 0

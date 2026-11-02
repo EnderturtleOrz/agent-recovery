@@ -18,3 +18,17 @@ def test_restart_rejects_unknown_fault_identity():
     artifact = Artifact(id="known", stage="researcher", payload=Payload(value=10))
     with pytest.raises(ValueError, match="Faulty artifact"):
         FullRestart().plan("other-run", (artifact,))
+
+
+@pytest.mark.parametrize(
+    "values",
+    [
+        {"kind": "incorrect_result", "category": "adversarial"},
+        {"kind": "malicious_instruction", "category": "accidental"},
+        {"kind": "stale_output", "stage": "planner"},
+        {"kind": "malicious_instruction", "stage": "planner"},
+    ],
+)
+def test_invalid_fault_schedule_rejected(values):
+    with pytest.raises(ValidationError):
+        FaultSpec(**values)

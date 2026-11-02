@@ -1,0 +1,9 @@
+name = "restart-structured"
+backend = "fake"
+task_file = "../data/tasks/purchase-structured.json"
+recovery = "full_restart"
+
+[fault]
+kind = "incorrect_result"
+stage = "researcher"
+delta = 7

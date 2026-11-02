@@ -1,0 +1,57 @@
+{
+  "run_role_counts": {
+    "clean": 12,
+    "clean_verify": 12,
+    "fault": 216,
+    "overhead": 24
+  },
+  "actual_sigint_check": {
+    "exit_code": 130,
+    "partial_suite": "artifacts/experiment-review-sigint/suite-abeb38a937644c8099a58daa54ca2129",
+    "recorded_runs": 2,
+    "statuses": [
+      "completed",
+      "interrupted"
+    ],
+    "manifest_status": "interrupted"
+  },
+  "readme_single_run_commands_checked_offline": 7,
+  "tests_passed": 132,
+  "new_regression_cases": 12,
+  "lint": "passed",
+  "format": "passed",
+  "diff_check": "passed",
+  "offline_suite": "artifacts/experiment-review-validation/suite-a9089f77a4b348aea0e86a06e7f71c85",
+  "source_sha256": "69d0146670210b9feb69b02493de437ce61e66624f3620e8a8d4069592f16250",
+  "runs": 264,
+  "tasks": 6,
+  "replicates": 2,
+  "completed_runs": 240,
+  "expected_timeout_failures": 24,
+  "unexpected_execution_failures": 0,
+  "full_restart_runs": 72,
+  "full_restart_correct": 72,
+  "always_verify_runs_including_clean": 84,
+  "always_verify_correct": 84,
+  "actual_api_calls": 0,
+  "real_api_check": "Not run: this review used offline fixtures and mocked HTTP responses.",
+  "audits": [
+    "Stage-specific fault regression and clean/overhead role separation verified.",
+    "Trusted catalog supplier mapping independently checked against every tracked order.",
+    "Ledger reset and final correctness replayed; safety history independently recounted.",
+    "Artifact IDs, dependencies, actual downstream inputs and source hashes checked.",
+    "Aggregate JSON regenerated from raw rows; every CSV cell matched."
+  ],
+  "semantics": [
+    "Exact final token allowance accepted; another call blocked; actual overshoot fails and costs remain.",
+    "Unknown usage remains sticky across errors when enforcing a token budget.",
+    "Price/stock errors remain separate correctness checks, not automatic authorization denials.",
+    "Unapplied/no-op faults are logged and excluded from propagation eligibility/restart.",
+    "Non-stop provider responses fail with available usage preserved."
+  ],
+  "limitations": [
+    "Offline fixture results are not real-model robustness evidence.",
+    "Authorization is for a simulated catalog/order ledger, not real external transactions.",
+    "Token overshoot can be detected only after reported usage; wall-time enforcement remains call-boundary based."
+  ]
+}

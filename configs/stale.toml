@@ -1,0 +1,8 @@
+name = "stale"
+backend = "fake"
+task_file = "../data/tasks/purchase-structured.json"
+recovery = "none"
+
+[fault]
+kind = "stale_output"
+stage = "researcher"
