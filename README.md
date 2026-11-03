@@ -57,6 +57,16 @@ quantity; splitting across SKUs and optimizing multiple demand lines are out of 
 Prices and budgets are integer cents. `unit_price` is retained for legacy fixture compatibility;
 structured-task truth comes from `catalog`.
 
+Additional [development and evaluation datasets](data/tasks/README.md) provide
+12 development tasks and 24 separate evaluation tasks, balanced across the same
+three task classes. Use development data for tuning and reserve evaluation data
+for the final comparison:
+
+```bash
+mas-recovery suite --tasks data/tasks/purchase-dev.json --backend fake
+mas-recovery suite --tasks data/tasks/purchase-eval.json --backend fake
+```
+
 ## Workflow
 
 ```text
