@@ -141,7 +141,7 @@ def test_scalar_requests_have_only_scalar_instructions_and_schema(stage, inputs,
         payload, _ = backend.generate(stage, inputs)
     assert payload.value == expected
     assert backend.last_record["prompt_mode"] == "scalar"
-    assert backend.last_record["prompt_version"] == PROMPT_VERSION == "purchase-v3"
+    assert backend.last_record["prompt_version"] == PROMPT_VERSION == "purchase-v4"
 
 
 @pytest.mark.parametrize(
@@ -209,3 +209,21 @@ def test_scalar_output_cannot_silently_use_structured_response_fields():
             TritonAIBackend(c, "test").generate("planner", {"value": 10, "quantity": 3})
     assert error.value.usage.input_tokens == 7
     assert error.value.usage.output_tokens == 5
+
+
+def test_output_contract_forbids_markdown_and_executor_envelope():
+    def handle(request):
+        prompt = json.loads(request.content)["messages"][0]["content"]
+        assert "Do not use Markdown or code fences" in prompt
+        assert "inside input.plan" in prompt
+        assert 'Do not return {"plan": ...}' in prompt
+        return httpx.Response(
+            200,
+            json={"choices": [{"message": {"content": '{"value":30}'}, "finish_reason": "stop"}]},
+        )
+
+    with httpx.Client(
+        base_url="https://example.test/v1/", transport=httpx.MockTransport(handle)
+    ) as c:
+        output, _ = TritonAIBackend(c, "mock").generate("executor", {"plan": {"value": 30}})
+    assert output.value == 30

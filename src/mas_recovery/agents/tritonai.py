@@ -10,7 +10,7 @@ from pydantic import Field
 from mas_recovery.agents.backend import ModelCallError, ModelCallInterrupted
 from mas_recovery.core.schemas import Payload, Record, Stage, Usage
 
-PROMPT_VERSION = "purchase-v3"
+PROMPT_VERSION = "purchase-v4"
 
 # Select the task contract in code before constructing a request. A model never
 # receives mutually exclusive task instructions or an unrelated output schema.
@@ -46,8 +46,9 @@ INSTRUCTIONS = {
             "Do not invent missing offers or change the supplied task constraints."
         ),
         "executor": (
-            "Return the supplied plan unchanged. Do not independently query prices, "
-            "recalculate totals or alter the supplier, product or quantity."
+            "The input is an envelope with a plan key. Return the JSON object inside input.plan "
+            'unchanged, not the outer envelope. Do not return {"plan": ...}. '
+            "Do not independently query prices, recalculate totals or alter any plan fields."
         ),
     },
 }
@@ -99,6 +100,8 @@ class TritonAIBackend:
                 {
                     "role": "system",
                     "content": instruction
+                    + " Output exactly one raw JSON object. Do not use Markdown or code fences. "
+                    + "Do not wrap the response in another object."
                     + " Return only a JSON object matching this schema: "
                     + json.dumps(response_type.model_json_schema(), sort_keys=True),
                 },
