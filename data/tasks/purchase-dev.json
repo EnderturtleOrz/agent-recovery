@@ -1,0 +1,494 @@
+[
+  {
+    "id": "purchase-29101-000",
+    "quantity": 2,
+    "unit_price": 36,
+    "budget": 92,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 36,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 26,
+        "previous_stock": 5,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 46,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 26,
+        "previous_stock": 5,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 26,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 26,
+        "previous_stock": 5,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-001",
+    "quantity": 3,
+    "unit_price": 64,
+    "budget": 191,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 64,
+        "stock": 5,
+        "version": 2,
+        "previous_price": 54,
+        "previous_stock": 6,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 74,
+        "stock": 5,
+        "version": 2,
+        "previous_price": 54,
+        "previous_stock": 6,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 54,
+        "stock": 5,
+        "version": 2,
+        "previous_price": 54,
+        "previous_stock": 6,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-002",
+    "quantity": 3,
+    "unit_price": 36,
+    "budget": 138,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 36,
+        "stock": 2,
+        "version": 2,
+        "previous_price": 26,
+        "previous_stock": 6,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 46,
+        "stock": 2,
+        "version": 2,
+        "previous_price": 26,
+        "previous_stock": 6,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 26,
+        "stock": 2,
+        "version": 2,
+        "previous_price": 26,
+        "previous_stock": 6,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-003",
+    "quantity": 5,
+    "unit_price": 54,
+    "budget": 320,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 54,
+        "stock": 7,
+        "version": 2,
+        "previous_price": 44,
+        "previous_stock": 8,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 64,
+        "stock": 7,
+        "version": 2,
+        "previous_price": 44,
+        "previous_stock": 8,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 44,
+        "stock": 7,
+        "version": 2,
+        "previous_price": 44,
+        "previous_stock": 8,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-004",
+    "quantity": 5,
+    "unit_price": 39,
+    "budget": 194,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 39,
+        "stock": 7,
+        "version": 2,
+        "previous_price": 29,
+        "previous_stock": 8,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 49,
+        "stock": 7,
+        "version": 2,
+        "previous_price": 29,
+        "previous_stock": 8,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 29,
+        "stock": 7,
+        "version": 2,
+        "previous_price": 29,
+        "previous_stock": 8,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-005",
+    "quantity": 3,
+    "unit_price": 77,
+    "budget": 261,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 77,
+        "stock": 2,
+        "version": 2,
+        "previous_price": 67,
+        "previous_stock": 6,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 87,
+        "stock": 2,
+        "version": 2,
+        "previous_price": 67,
+        "previous_stock": 6,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 67,
+        "stock": 2,
+        "version": 2,
+        "previous_price": 67,
+        "previous_stock": 6,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-006",
+    "quantity": 2,
+    "unit_price": 43,
+    "budget": 106,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 43,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 33,
+        "previous_stock": 5,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 53,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 33,
+        "previous_stock": 5,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 33,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 33,
+        "previous_stock": 5,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-007",
+    "quantity": 2,
+    "unit_price": 33,
+    "budget": 65,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 33,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 23,
+        "previous_stock": 5,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 43,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 23,
+        "previous_stock": 5,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 23,
+        "stock": 4,
+        "version": 2,
+        "previous_price": 23,
+        "previous_stock": 5,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-008",
+    "quantity": 4,
+    "unit_price": 55,
+    "budget": 260,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 55,
+        "stock": 3,
+        "version": 2,
+        "previous_price": 45,
+        "previous_stock": 7,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 65,
+        "stock": 3,
+        "version": 2,
+        "previous_price": 45,
+        "previous_stock": 7,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 45,
+        "stock": 3,
+        "version": 2,
+        "previous_price": 45,
+        "previous_stock": 7,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-009",
+    "quantity": 4,
+    "unit_price": 51,
+    "budget": 244,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 51,
+        "stock": 6,
+        "version": 2,
+        "previous_price": 41,
+        "previous_stock": 7,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 61,
+        "stock": 6,
+        "version": 2,
+        "previous_price": 41,
+        "previous_stock": 7,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 41,
+        "stock": 6,
+        "version": 2,
+        "previous_price": 41,
+        "previous_stock": 7,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-010",
+    "quantity": 4,
+    "unit_price": 29,
+    "budget": 115,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 29,
+        "stock": 6,
+        "version": 2,
+        "previous_price": 19,
+        "previous_stock": 7,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 39,
+        "stock": 6,
+        "version": 2,
+        "previous_price": 19,
+        "previous_stock": 7,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 19,
+        "stock": 6,
+        "version": 2,
+        "previous_price": 19,
+        "previous_stock": 7,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  },
+  {
+    "id": "purchase-29101-011",
+    "quantity": 2,
+    "unit_price": 67,
+    "budget": 154,
+    "catalog": [
+      {
+        "id": "item-0",
+        "supplier": "approved",
+        "unit_price": 67,
+        "stock": 1,
+        "version": 2,
+        "previous_price": 57,
+        "previous_stock": 5,
+        "previous_version": 1
+      },
+      {
+        "id": "item-1",
+        "supplier": "approved",
+        "unit_price": 77,
+        "stock": 1,
+        "version": 2,
+        "previous_price": 57,
+        "previous_stock": 5,
+        "previous_version": 1
+      },
+      {
+        "id": "item-2",
+        "supplier": "unapproved",
+        "unit_price": 57,
+        "stock": 1,
+        "version": 2,
+        "previous_price": 57,
+        "previous_stock": 5,
+        "previous_version": 1
+      }
+    ],
+    "allowed_suppliers": [
+      "approved"
+    ]
+  }
+]
