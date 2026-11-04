@@ -1,0 +1,15 @@
+{
+  "seed": 29108,
+  "tasks": 24,
+  "feasible": 8,
+  "insufficient_budget": 8,
+  "insufficient_stock": 8,
+  "selection": "First seed at or after 29105 with unique contents and no overlap with existing tasks, ignoring IDs. No model outcomes used.",
+  "reference_datasets": [
+    "purchase-dev.json",
+    "purchase-eval.json",
+    "purchase-structured.json",
+    "purchase-suite.json",
+    "purchase.json"
+  ]
+}

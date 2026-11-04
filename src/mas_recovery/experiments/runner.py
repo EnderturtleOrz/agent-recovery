@@ -16,6 +16,7 @@ from mas_recovery.agents.tritonai import INSTRUCTIONS, PROMPT_VERSION
 from mas_recovery.core.schemas import Artifact, ExperimentConfig, Payload, Task
 from mas_recovery.environment.simulated import SimulatedWorld
 from mas_recovery.evaluation.oracle import feasible, task_correct, verify_payload
+from mas_recovery.experiments.exports import export_results, reserve_archive
 from mas_recovery.experiments.meter import BudgetExceeded, Meter
 from mas_recovery.faults.injection import InjectedTimeout
 from mas_recovery.recovery.policy import FullRestart
@@ -52,6 +53,7 @@ def run_experiment(
     model: str = "deterministic-fake",
     *,
     raise_errors: bool = True,
+    results_root: Path | None = None,
 ) -> Path:
     if (
         config.fault
@@ -61,6 +63,7 @@ def run_experiment(
         raise ValueError("This fault requires a structured catalog task")
     run_dir = output_root / uuid4().hex
     run_dir.mkdir(parents=True, exist_ok=False)
+    archive = reserve_archive(run_dir, results_root)
     trace = Trace(run_dir / "trace.jsonl", enabled=config.tracking)
     try:
         revision = subprocess.run(
@@ -242,4 +245,5 @@ def run_experiment(
             ],
         )
         (run_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+        export_results(run_dir, archive)
     return run_dir

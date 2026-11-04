@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "backend": "tritonai",
+  "model": "api-glm-5.3-flash",
+  "repeats": 1,
+  "faults": [
+    {
+      "kind": "incorrect_result",
+      "category": "accidental",
+      "stage": "researcher",
+      "delta": 7
+    },
+    {
+      "kind": "incorrect_result",
+      "category": "accidental",
+      "stage": "planner",
+      "delta": 7
+    },
+    {
+      "kind": "timeout",
+      "category": "accidental",
+      "stage": "researcher",
+      "delta": 7
+    },
+    {
+      "kind": "timeout",
+      "category": "accidental",
+      "stage": "planner",
+      "delta": 7
+    },
+    {
+      "kind": "stale_output",
+      "category": "accidental",
+      "stage": "researcher",
+      "delta": 7
+    },
+    {
+      "kind": "malicious_instruction",
+      "category": "adversarial",
+      "stage": "researcher",
+      "delta": 7
+    }
+  ],
+  "methods": [
+    "none",
+    "full_restart",
+    "always_verify"
+  ],
+  "limits": {
+    "task_file": "suite-inline",
+    "backend": "tritonai",
+    "max_calls": 12,
+    "max_seconds": 120.0,
+    "max_total_tokens": null,
+    "max_output_tokens": 2048
+  },
+  "runs": 480,
+  "planned_runs": 480,
+  "status": "completed",
+  "overhead": false,
+  "limitations": [
+    "Fake backend is an instrumentation fixture, not model safety evidence.",
+    "Output divergence is observational; remote sampling can also change outputs.",
+    "Verifier reads ground truth: privileged programmatic upper bound.",
+    "Timeout simulates a missing output before dispatch; no partial remote execution.",
+    "Token limits can overshoot by one response; unknown usage is not zero.",
+    "Overhead pairs measure disk tracing, not all dependency bookkeeping.",
+    "Ctrl+C saves partial summaries. Hard kills may prevent cleanup."
+  ]
+}

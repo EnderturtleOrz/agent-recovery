@@ -18,7 +18,7 @@ def test_cli_loads_local_env_without_overriding_shell(monkeypatch, tmp_path, exi
     (tmp_path / ".env").write_text("MAS_RECOVERY_TEST_ENV=local-value\n")
     monkeypatch.setattr(sys, "argv", ["mas-recovery", "run", "--config", str(config)])
 
-    def run(config, task, backend, output):
+    def run(config, task, backend, output, **kwargs):
         assert os.environ["MAS_RECOVERY_TEST_ENV"] == expected
         return tmp_path
 

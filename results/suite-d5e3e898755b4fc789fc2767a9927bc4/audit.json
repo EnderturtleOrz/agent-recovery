@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "runs_checked": 480,
+  "compact_metrics_match_raw": true,
+  "call_usage_and_ledger_replay_match": true,
+  "verification_rejections": 144,
+  "semantic_verification_mismatches": 0,
+  "stage_response_contract_checked": true,
+  "total_wasted_recovery_usage_recomputed": true,
+  "stage_retry_attempts": 144,
+  "http_status_counts": {
+    "200": 1728
+  },
+  "finish_reason_counts": {
+    "stop": 1728
+  },
+  "abstention_shape_rejection_runs": 0,
+  "failed_but_physical_final_state_correct": 32,
+  "diagnostic_note": "Physical final state is descriptive only; failed workflows remain unsuccessful in the primary metric.",
+  "checks": [
+    "24 x 20 matrix coverage",
+    "raw/compact metric identity",
+    "call-level usage sums",
+    "one-shot fault and reset counts",
+    "verification and recomputation counts",
+    "independent verification semantics for every checked artifact",
+    "four-field v5 decision responses and executor inputs",
+    "total, wasted and recovery usage with missing-usage accounting",
+    "order-ledger replay and independent tool authorization checks",
+    "paired affected-stage and eligibility recomputation",
+    "source/prompt provenance consistency"
+  ]
+}

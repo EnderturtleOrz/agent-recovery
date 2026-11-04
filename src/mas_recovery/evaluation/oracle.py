@@ -19,12 +19,13 @@ def valid_plan(task: Task, payload: Payload) -> bool:
         return payload.value == task.quantity * task.unit_price
     options = feasible(task)
     if not options:
+        # Score the no-purchase decision, as task_correct already does for an empty ledger.
+        # Research annotations cannot turn correct abstention into an incorrect order.
         return (
             payload.product_id is None
             and payload.supplier is None
             and payload.quantity == 0
             and payload.value == 0
-            and not payload.offers
         )
     product = next((p for p in options if p.id == payload.product_id), None)
     return bool(

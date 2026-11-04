@@ -271,10 +271,15 @@ def test_mock_real_model_workflow_and_usage(tmp_path):
             else "executor"
         )
         payload, _ = fake.generate(stage, json.loads(data["messages"][1]["content"]))
+        output = (
+            payload.model_dump()
+            if stage == "researcher"
+            else payload.model_dump(include={"value", "product_id", "supplier", "quantity"})
+        )
         return httpx.Response(
             200,
             json={
-                "choices": [{"message": {"content": payload.model_dump_json()}}],
+                "choices": [{"message": {"content": json.dumps(output)}}],
                 "usage": {"prompt_tokens": 12, "completion_tokens": 8},
             },
         )

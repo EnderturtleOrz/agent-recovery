@@ -1,0 +1,563 @@
+[
+  {
+    "run_id": "30474b3b03e248d295993c73425237fc",
+    "task_id": "purchase-29108-000",
+    "condition": "incorrect_result@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 140
+      }
+    ],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 112
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "84f9a9b432fd449e954f937dfa4c665d",
+    "task_id": "purchase-29108-000",
+    "condition": "incorrect_result@planner",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 119
+      }
+    ],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 112
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "af14466ed9594c06b4ed539f9e9e3170",
+    "task_id": "purchase-29108-000",
+    "condition": "timeout@researcher",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "30e0452c76d14081bccbfc18256e0a20",
+    "task_id": "purchase-29108-000",
+    "condition": "timeout@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 112
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "813453193f58408ebf82daf39f1e5d3a",
+    "task_id": "purchase-29108-000",
+    "condition": "timeout@planner",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "de1d4bdd809e4eabb743d5c69acd0211",
+    "task_id": "purchase-29108-000",
+    "condition": "timeout@planner",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 112
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "830233d6afb34a02a5889f58b3d425b0",
+    "task_id": "purchase-29108-000",
+    "condition": "stale_output@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 72
+      }
+    ],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 112
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "a9a066ae93484f8684650fd6a4589ce8",
+    "task_id": "purchase-29108-001",
+    "condition": "timeout@researcher",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "8444e716916e43e79ac3882d9d85f925",
+    "task_id": "purchase-29108-001",
+    "condition": "timeout@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "be65691a60da477da0ed690ff835b34a",
+    "task_id": "purchase-29108-001",
+    "condition": "timeout@planner",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "47bad67e248d4116998840dd39fd5517",
+    "task_id": "purchase-29108-001",
+    "condition": "timeout@planner",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "7aa93c9932cb42aaaf6ebbc557b4c069",
+    "task_id": "purchase-29108-001",
+    "condition": "stale_output@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 40
+      }
+    ],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "8219195f4e1d4d28b4c15af6fe2ce8a4",
+    "task_id": "purchase-29108-002",
+    "condition": "timeout@researcher",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "60ff3e590b6d457ea715b777f5ca0487",
+    "task_id": "purchase-29108-002",
+    "condition": "timeout@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "6695357f2f61489cb601b60f08b41e5c",
+    "task_id": "purchase-29108-002",
+    "condition": "timeout@planner",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "717f25d8052644b48471e0422827813a",
+    "task_id": "purchase-29108-002",
+    "condition": "timeout@planner",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "3eb8efc7219742678264c231dfcda5e6",
+    "task_id": "purchase-29108-002",
+    "condition": "stale_output@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 4,
+        "supplier": "approved",
+        "value": 148
+      }
+    ],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "0f873110a8b541ad85bb66d25c90c0f9",
+    "task_id": "purchase-29108-003",
+    "condition": "incorrect_result@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 3,
+        "supplier": "approved",
+        "value": 84
+      }
+    ],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 3,
+        "supplier": "approved",
+        "value": 63
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "74a5a2d421b8459f93597dac91dca99c",
+    "task_id": "purchase-29108-003",
+    "condition": "incorrect_result@planner",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 3,
+        "supplier": "approved",
+        "value": 70
+      }
+    ],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 3,
+        "supplier": "approved",
+        "value": 63
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "1f1ffe6cd68542e4a6afa13cef870b02",
+    "task_id": "purchase-29108-003",
+    "condition": "timeout@researcher",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "946ed9c5e7dc4b368a6166a06c285d11",
+    "task_id": "purchase-29108-003",
+    "condition": "timeout@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 3,
+        "supplier": "approved",
+        "value": 63
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "eb6cc1fb0855412dacb04b68c93fe8da",
+    "task_id": "purchase-29108-003",
+    "condition": "timeout@planner",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "bcd0c65764df42c98e1647e8397b9682",
+    "task_id": "purchase-29108-003",
+    "condition": "timeout@planner",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 3,
+        "supplier": "approved",
+        "value": 63
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "7621705eeb6349c6a621e8d250ab79aa",
+    "task_id": "purchase-29108-003",
+    "condition": "stale_output@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 3,
+        "supplier": "approved",
+        "value": 33
+      }
+    ],
+    "final_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 3,
+        "supplier": "approved",
+        "value": 63
+      }
+    ],
+    "rejections": []
+  },
+  {
+    "run_id": "0ce2ee7d9d9a4f9d80c1207bf4f9910f",
+    "task_id": "purchase-29108-004",
+    "condition": "timeout@researcher",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "fb5d0f61b73d4591ae79f08e2340bb22",
+    "task_id": "purchase-29108-004",
+    "condition": "timeout@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "5c86229770414b48b4fe071a0d01c212",
+    "task_id": "purchase-29108-004",
+    "condition": "timeout@planner",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "c8c40b2839d74a08a627849c0acb894d",
+    "task_id": "purchase-29108-004",
+    "condition": "timeout@planner",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "65beb013033341a8a814ffdab994c260",
+    "task_id": "purchase-29108-004",
+    "condition": "stale_output@researcher",
+    "method": "full_restart",
+    "initial_correct": false,
+    "final_correct": true,
+    "error_type": null,
+    "diagnosis": null,
+    "initial_orders": [
+      {
+        "note": "",
+        "offers": [],
+        "product_id": "item-0",
+        "quantity": 2,
+        "supplier": "approved",
+        "value": 38
+      }
+    ],
+    "final_orders": [],
+    "rejections": []
+  },
+  {
+    "run_id": "214513bb2b7e4c6c95dee71dd3d165f7",
+    "task_id": "purchase-29108-005",
+    "condition": "timeout@researcher",
+    "method": "none",
+    "initial_correct": false,
+    "final_correct": false,
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "initial_orders": null,
+    "final_orders": [],
+    "rejections": []
+  }
+]
