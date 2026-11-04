@@ -145,7 +145,7 @@ def test_single_run_backend_override_is_reflected_in_manifest_config(
         cli, "make_client", lambda: httpx.Client(base_url="https://example.test/v1/")
     )
 
-    def inspect(config, task, backend, output, *model):
+    def inspect(config, task, backend, output, *model, **kwargs):
         assert config.backend == override
         assert isinstance(backend, FakeBackend if override == "fake" else TritonAIBackend)
         return tmp_path

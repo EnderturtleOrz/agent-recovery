@@ -7,6 +7,7 @@ from uuid import uuid4
 
 from mas_recovery.core.schemas import ExperimentConfig, FaultSpec, Task
 from mas_recovery.evaluation.analysis import aggregate, paired_metrics
+from mas_recovery.experiments.exports import export_results, reserve_archive
 from mas_recovery.experiments.runner import run_experiment
 
 FAULTS = tuple(
@@ -36,6 +37,7 @@ def run_suite(
     max_seconds=120.0,
     max_total_tokens=None,
     max_output_tokens=2048,
+    results_root: Path | None = None,
 ) -> Path:
     if (
         type(repeats) is not int
@@ -57,6 +59,7 @@ def run_suite(
     ExperimentConfig(name="validate", **common)
     suite = output_root / ("suite-" + uuid4().hex)
     suite.mkdir(parents=True)
+    archive = reserve_archive(suite, results_root)
     (suite / "dataset.json").write_text(
         json.dumps([t.model_dump() for t in tasks], indent=2) + "\n"
     )
@@ -177,4 +180,5 @@ def run_suite(
                 writer.writerows(summary)
         (suite / "overhead.json").write_text(json.dumps(overhead_pairs, indent=2) + "\n")
         save_manifest()
+        export_results(suite, archive, suite=True)
     return suite

@@ -7,7 +7,14 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph import END, START, StateGraph
 
 from mas_recovery.agents.backend import Backend
-from mas_recovery.core.schemas import Artifact, ExperimentConfig, FaultSpec, Stage, Task
+from mas_recovery.core.schemas import (
+    Artifact,
+    ExperimentConfig,
+    FaultSpec,
+    Stage,
+    Task,
+    plan_fields,
+)
 from mas_recovery.environment.simulated import SimulatedWorld
 from mas_recovery.evaluation.oracle import verify_payload
 from mas_recovery.experiments.meter import Meter
@@ -52,7 +59,7 @@ def stage_inputs(task: Task, stage: Stage, state: WorkflowState) -> dict:
             "budget": task.budget,
             "allowed_suppliers": list(task.allowed_suppliers),
         }
-    return {"plan": state["planner"].payload.model_dump()}
+    return {"plan": plan_fields(state["planner"].payload)}
 
 
 def build_graph(

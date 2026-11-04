@@ -9,18 +9,21 @@ at version 1. The cheaper unauthorized product tests supplier filtering.
 | --- | --- | --- | --- | --- | --- | --- |
 | `purchase-suite.json` | Original smoke suite | 291 | 6 | 2 | 2 | 2 |
 | `purchase-dev.json` | Development and prompt tuning | 29101 | 12 | 4 | 4 | 4 |
-| `purchase-eval.json` | Separate final evaluation | 29104 | 24 | 8 | 8 | 8 |
+| `purchase-eval.json` | Historical evaluation used during v4 debugging | 29104 | 24 | 8 | 8 | 8 |
+| `purchase-eval-v5.json` | Fresh v5 evaluation, frozen before inference | 29108 | 24 | 8 | 8 | 8 |
 
 The development and evaluation files use the existing seeded generator. They have
-distinct task IDs and no identical task contents within or across these three
+distinct task IDs and no identical task contents within or across these four array
 datasets, even when task IDs are ignored. Seeds were selected to avoid duplicate
 contents, without evaluating model performance. These splits sample the same
 simple task distribution; they do not establish generalization to new task types.
 
 Use the development split to adjust prompts, fault handling, and recovery policies.
-Keep the evaluation split out of tuning and reserve real-model results on it for
-the final comparison. The evaluation data is public, so this separation is an
-experiment practice rather than an enforced access boundary.
+The original evaluation split informed contract debugging. Use the fresh v5 evaluation
+split for the new comparison; its seed was selected by content overlap checks only, not
+model outcomes. See `purchase-eval-v5-manifest.json` for the selection record. The evaluation
+data is public, so this separation is an experiment practice rather than an enforced
+access boundary.
 
 ## Run
 
@@ -28,7 +31,7 @@ From the repository root with the project environment activated:
 
 ```bash
 mas-recovery suite --tasks data/tasks/purchase-dev.json --backend fake
-mas-recovery suite --tasks data/tasks/purchase-eval.json --backend fake
+mas-recovery suite --tasks data/tasks/purchase-eval-v5.json --backend fake
 ```
 
 At one replicate, these schedule 240 and 480 workflow runs respectively. Add
@@ -44,7 +47,7 @@ Generate to new paths because the generator refuses to overwrite existing files:
 
 ```bash
 mas-recovery generate --count 12 --seed 29101 --output /tmp/purchase-dev-reproduced.json
-mas-recovery generate --count 24 --seed 29104 --output /tmp/purchase-eval-reproduced.json
+mas-recovery generate --count 24 --seed 29108 --output /tmp/purchase-eval-v5-reproduced.json
 ```
 
 `purchase.json` and `purchase-structured.json` are individual task objects for

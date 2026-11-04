@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "tests_passed": 166,
+  "runs": 480,
+  "conditions": 20,
+  "runs_per_condition": 24,
+  "model_calls": 1728,
+  "total_tokens": 923435,
+  "expected_timeout_execution_failures": 48,
+  "unexpected_execution_failures": 0,
+  "verification_semantic_mismatches": 0,
+  "new_task_duplicates": 0,
+  "new_task_overlap_with_prior_data": 0,
+  "offline_report_regeneration_identical": true,
+  "report_sha256": "dddecf5bdee0f2ab2cf565b4a01b9876ef7d7e1f9a1c7c8872a4903071e15e2b",
+  "analysis_script_sha256": "31716bbeab1a4a38c1bbe6ccf0c79435b9a40bc32bb75f7927e46b9558a51c7a",
+  "credentials_not_exported": true,
+  "pre_submission_review": {
+    "tests_passed": 169,
+    "recorded_data_and_execution_snapshot_unchanged": true,
+    "current_agent_source_matches_recorded_snapshot": true,
+    "offline_report_regeneration_identical": true,
+    "candidate_files_contain_no_configured_credentials": true,
+    "raw_artifacts_not_tracked": true,
+    "result_links_valid": 20,
+    "large_files_over_10mb": 0
+  }
+}

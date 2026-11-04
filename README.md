@@ -25,30 +25,63 @@ Without uv, create a virtual environment and use:
 python -m pip install -r requirements.txt -e .
 ```
 
-## 怎么跑实验
+## Running experiments
 
-在仓库根目录、激活环境后运行。`tritonai` 需要先配置 `.env`（见 [API 配置](#real-model-runs)）；
-`fake` 不调用 API。单次实验用于检查流程，完整实验组用于汇总比较。
+Run commands from the repository root with the project environment activated.
+The `tritonai` backend requires a local `.env` file (see [Real-model runs](#real-model-runs));
+`fake` makes no API requests. Single runs check individual conditions; suites produce
+paired comparisons across faults and recovery strategies.
 
-| 实验内容 | 指令 | 可获得结果 |
+| Experiment | Command | Results |
 | --- | --- | --- |
-| 正常基线（结构化采购，单次） | `mas-recovery run --config configs/structured.toml --backend tritonai` | 正确性、调用次数、token 和耗时 |
-| 错误报价传播（单次） | `mas-recovery run --config configs/incorrect-structured.toml --backend tritonai` | 被修改的报价、下游计划与订单、最终正确性 |
-| 过期数据传播（单次） | `mas-recovery run --config configs/stale.toml --backend tritonai` | 旧数据版本、下游输出和最终正确性 |
-| 恶意指令传播（单次） | `mas-recovery run --config configs/malicious.toml --backend tritonai` | 越权尝试、拦截原因和最终正确性 |
-| 完整重启（单次） | `mas-recovery run --config configs/restart-structured.toml --backend tritonai` | 恢复前后正确性、重跑阶段数和恢复成本 |
-| 逐阶段验证（单次） | `mas-recovery run --config configs/verify.toml --backend tritonai` | 验证记录、最终正确性和额外调用开销 |
-| 超时后重启（单次） | `mas-recovery run --config configs/timeout.toml --backend tritonai` | 缺失输出、恢复结果和恢复成本 |
-| 完整离线实验组 | `mas-recovery suite --backend fake --repeats 2 --overhead` | 264 次运行；检查实验框架，生成汇总表和日志 |
-| 完整真实模型实验组 | `mas-recovery suite --backend tritonai --repeats 3 --overhead` | 396 次运行；比较各故障与策略的成功率、传播、安全性、成本和耗时 |
+| Clean structured baseline, single task | `mas-recovery run --config configs/structured.toml --backend tritonai` | Correctness, calls, tokens, and latency |
+| Incorrect quote propagation, single task | `mas-recovery run --config configs/incorrect-structured.toml --backend tritonai` | Modified quotes, downstream plans/orders, and correctness |
+| Stale-data propagation, single task | `mas-recovery run --config configs/stale.toml --backend tritonai` | Old catalog versions, downstream outputs, and correctness |
+| Malicious instruction, single task | `mas-recovery run --config configs/malicious.toml --backend tritonai` | Unauthorized attempts, rejection reasons, and correctness |
+| Full restart, single task | `mas-recovery run --config configs/restart-structured.toml --backend tritonai` | Initial/final correctness, recomputed stages, and recovery cost |
+| Always verify, single task | `mas-recovery run --config configs/verify.toml --backend tritonai` | Verification decisions, correctness, and additional generation calls |
+| Controlled timeout with restart, single task | `mas-recovery run --config configs/timeout.toml --backend tritonai` | Missing output, recovery outcome, and recovery cost |
+| Offline smoke matrix | `mas-recovery suite --backend fake --repeats 2 --overhead` | 264 workflow runs validating the harness |
+| Real-model development matrix | `mas-recovery suite --tasks data/tasks/purchase-dev.json --backend tritonai --repeats 1` | 240 runs for debugging and prompt tuning |
+| Real-model evaluation matrix | `python scripts/run_phase1.py` | 480 runs for the report, with fixed code/model/prompts |
 
-单次结果在终端打印的 `artifacts/<run-id>/` 中，主要看 `summary.json` 和 `trace.jsonl`。
-整组结果在 `artifacts/suite-<id>/` 中，主要看 `summary.csv`；逐次结果见 `results.jsonl`，
-原始日志见 `runs/`。汇总中的 `run_role` 区分正常基线、验证基线、故障实验和日志开销实验。
+For the complete real-model evaluation, `python scripts/run_phase1.py` runs the same
+480-condition matrix with controlled admission between workflows (default target:
+1.2 seconds per model request, accounting for elapsed workflow time). These waits are
+outside per-run meters and latency measurements. The driver stops further admission
+after HTTP 401, 403, or 429 and does not silently retry provider failures. Pacing settings
+and actual waiting time are saved in `execution.json`. Direct `mas-recovery suite` commands
+remain available when the provider's request allowance is sufficient.
 
-运行次数基于默认 6 个任务；真实实验消耗 API 配额，工作流次数不等于模型调用次数。
-中途按 Ctrl+C 会停止后续运行，并保存已完成结果和当前中断记录；CLI 会打印部分结果目录。
-`summary.csv` 中的中断实验是部分结果，不应当作完整矩阵；可检查 manifest 的 `status` 和 `planned_runs`。
+Each task/replicate receives two clean controls and six fault schedules under three
+strategies: no recovery, full restart, and always verify (20 runs per task).
+`--overhead` adds two disk-trace controls per task; `--repeats` multiplies the matrix size.
+Workflow counts are not API-call counts: restarts and verification retries require extra calls.
+Reserve the evaluation split for the final comparison, after tuning on development data.
+
+Every command automatically saves two outputs and prints both paths:
+
+| Directory | Contents | Purpose |
+| --- | --- | --- |
+| `results/<run-id or suite-id>/` | Summaries, per-run metrics, tasks, configuration, and source/prompt provenance | Compact results suitable for GitHub and report analysis |
+| `artifacts/<run-id or suite-id>/` | Full raw traces, model requests/responses, and all original files | Local inspection; ignored by Git |
+
+For suites, start with `results/suite-<id>/summary.csv`. Per-run metrics are in
+`results.jsonl`, experiment settings/status in `suite-manifest.json`, per-run provenance
+in `run-metadata.jsonl`, and the exact task snapshot in `dataset.json`. Single runs retain
+`manifest.json` and `summary.json`. The compact export preserves correctness, propagation,
+safety, recovery, verification, token, call, and latency metrics while omitting raw model
+conversations and duplicated propagation inputs. Every execution creates a new directory.
+
+`results/` is not ignored: use normal `git add`, commit, and push to publish it.
+Use `--results-output <directory>` to change the compact destination; `--output` controls
+raw artifacts. Neither export copies `.env` or API credentials.
+
+Completed runs, execution failures, and Ctrl+C interruptions retain available results.
+A hard process kill does not guarantee compact export. Before reporting a full matrix,
+check `suite-manifest.json` for `status=completed` and matching actual/planned run counts.
+Individual failed runs remain in success-rate denominators; a completed suite can contain
+failed workflows. `run_role` separates clean, clean-verify, fault, and overhead conditions.
 
 The checked-in suite has **6 tasks**: feasible purchases, insufficient budget, and
 insufficient stock. Each has three offers, an authorized supplier list, current catalog
@@ -64,8 +97,11 @@ for the final comparison:
 
 ```bash
 mas-recovery suite --tasks data/tasks/purchase-dev.json --backend fake
-mas-recovery suite --tasks data/tasks/purchase-eval.json --backend fake
+mas-recovery suite --tasks data/tasks/purchase-eval-v5.json --backend fake
 ```
+
+The new purchase-v5 evaluation is documented in
+[Phase 1 results](results/phase1-results.md), with per-condition tables and reproducibility files.
 
 ## Workflow
 
@@ -80,6 +116,17 @@ Executor: return the plan → simulated order tool
         ↓
 Independent correctness oracle + safety history
 ```
+
+The current prompt contract is `purchase-v5`. Planner and Executor output exactly
+`value`, `product_id`, `supplier`, and `quantity`; quote lists and research notes are not
+part of a purchase decision. A no-purchase decision is
+`{"value":0,"product_id":null,"supplier":null,"quantity":0}`. Executor receives only these
+four fields, copied without recalculating or repairing them. Semantic scoring checks the
+decision fields, rather than rejecting a correct abstention for unrelated research data.
+The strict model response schema still rejects extra fields and malformed JSON.
+See [the v5 output-contract fix and development checks](docs/output-contract-v5.md).
+The v4 results are preliminary diagnostics; new formal comparisons must use one fixed
+version across all strategies. The original evaluation split has already informed debugging.
 
 Nodes make one structured model call each; the workflow invokes the order tool in Python.
 This is a fixed agent workflow, not an autonomous tool-selection loop. The planner receives

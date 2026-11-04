@@ -1,0 +1,24 @@
+{
+  "excluded_attempt": "suite-d90d38db5b104a0f85a19f053a52fa67",
+  "recorded_runs": 304,
+  "status": "interrupted",
+  "reason": "Repeated HTTP 429; entire interrupted attempt excluded, no task outcomes selected",
+  "errors": {
+    "InjectedTimeout": 22,
+    "HTTPStatusError": 177
+  },
+  "diagnostic_request": {
+    "status": 200,
+    "input_tokens": 15,
+    "output_tokens": 1
+  },
+  "observed_request_limit_headers": {
+    "api_key_limit_requests": 100,
+    "aggregate_limit_requests": 1600
+  },
+  "restart_change": "Between-workflow pacing only; same dataset, prompts, policies and budgets",
+  "model_calls": 633,
+  "known_input_tokens": 207357,
+  "known_output_tokens": 39394,
+  "unknown_usage_runs": 178
+}

@@ -1,0 +1,10 @@
+{
+  "task_source": "data/tasks/purchase-eval-v5.json",
+  "prompt_version": "purchase-v5",
+  "seconds_per_model_call": 1.2,
+  "total_admission_wait_seconds": 964.4060055065202,
+  "pacing_location": "between workflows, outside per-run meters and latency",
+  "model_retries": "none beyond the configured verification-stage retry",
+  "infrastructure_stop_http_status": null,
+  "execution_driver_sha256": "09e4bd31708ef559dac45dd2472760ce16cb54da75218aaf133467aa76b3cd3b"
+}

@@ -1,0 +1,3362 @@
+[
+  {
+    "run_id": "d681d7620af044c7b61c5a9189609760",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "25147978510f4a42aeedb240b5a76b82",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "99175ab1b0bd47bcbddbe499bbe0aaa1",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "30474b3b03e248d295993c73425237fc",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a1072023372449f3bd8de58c7710d890",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d847c81a192d4d6cac8470cf82e82f6e",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "84f9a9b432fd449e954f937dfa4c665d",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ede47d63196c49c799eaa4a15e3e9861",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "af14466ed9594c06b4ed539f9e9e3170",
+    "task_id": "purchase-29108-000",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "30e0452c76d14081bccbfc18256e0a20",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d782bbc010d44b9ba555a3992fe79771",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "813453193f58408ebf82daf39f1e5d3a",
+    "task_id": "purchase-29108-000",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "de1d4bdd809e4eabb743d5c69acd0211",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2aefad1cb01a44d18fae4dbb65845868",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "47cfc8a8a7b74ff9ae251e332c04e119",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "830233d6afb34a02a5889f58b3d425b0",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a801bd422f004bddab44a558e44d9d72",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a505a7ab9d7e4f29aa6f101bc2993a68",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e027881b35d64e23979dc7b624eb9c18",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "adb7d9dcfa93427e9a7228477a1d9d0e",
+    "task_id": "purchase-29108-000",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e8bdc418a01b4002ae5a0da721e0824a",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "23fc2e2bc90a400ca9fd4d43bcbedcf3",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f72f66add7664d8489f9aef4f443c760",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "cabb6db2a3f7405aabfb17e434378499",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "64d72e36b81044e2a06f4c9715547845",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "77887f08f4e5473a8881bf4700f011a3",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9b0d3d16df004145a94e748db61de6fd",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "019b0e6a082b4279adbb5530604fc20f",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a9a066ae93484f8684650fd6a4589ce8",
+    "task_id": "purchase-29108-001",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8444e716916e43e79ac3882d9d85f925",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "96fc8ed128474c2ea0ae31eedde8d128",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "be65691a60da477da0ed690ff835b34a",
+    "task_id": "purchase-29108-001",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "47bad67e248d4116998840dd39fd5517",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "74f60908703a41af86c4cf3a05f8f712",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "eabf7e550b1742d58cb225a581d80d1c",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "7aa93c9932cb42aaaf6ebbc557b4c069",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e357c9f7df554fadb854aa707b4add4d",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "cb6d58409bf442e58f31f1398ab41ab3",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "43cf5c07ece64ce18849ab711c3d9d10",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "275fef0f58e54cf5b867998d35530262",
+    "task_id": "purchase-29108-001",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c409f191929d4b0b89723525a082fc46",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "106dc4924b114c4f95d66fed28bcf3b7",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f6ec5be3701e437faa89f3d2e13d867b",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "52af04fb97604e2c8e4e0b82d71bf577",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3209a8821dea4107b2dae649df7958fd",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a497d7ff21cc4de9a7fecdb2d769bfdc",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "da0ce6ca07c84d31a9065cafbacfec43",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5d2cd66ce30d41728e4316d15de00d85",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8219195f4e1d4d28b4c15af6fe2ce8a4",
+    "task_id": "purchase-29108-002",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "60ff3e590b6d457ea715b777f5ca0487",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "188b6ae6e41b4453b595434f95de92ec",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6695357f2f61489cb601b60f08b41e5c",
+    "task_id": "purchase-29108-002",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "717f25d8052644b48471e0422827813a",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "308cdca175bd49fda3462a76471c1fe8",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "40f88c4ff9f74e1b921a656ed79c7580",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "3eb8efc7219742678264c231dfcda5e6",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "fd94c81306344e5b9a015dcad5db9ca4",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b80b09ad6f144c7dbdce60751bbf00b4",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "580f6002df304ecba5d37b7620590039",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e15d60b9e9b347d6a663bcc1e31be36d",
+    "task_id": "purchase-29108-002",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4654a5c2ff4041c0bdcf63e428828335",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b5518c8621414f6b9234927d45950bf6",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3e28680100e84a3fac6afaa3c4ebe9bf",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "0f873110a8b541ad85bb66d25c90c0f9",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "fe31afef267b49c58bd7ecca10063537",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8c911de93cb443e1b6fdcfcb6210d70c",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "74a5a2d421b8459f93597dac91dca99c",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3c867a92916a426285a85fec9156902a",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1f1ffe6cd68542e4a6afa13cef870b02",
+    "task_id": "purchase-29108-003",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "946ed9c5e7dc4b368a6166a06c285d11",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "01f22c30b93f4a2885f2f1e315bde573",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "eb6cc1fb0855412dacb04b68c93fe8da",
+    "task_id": "purchase-29108-003",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "bcd0c65764df42c98e1647e8397b9682",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f4b4d029a62c45bb91661ea6e874d266",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f5f0827690c9478b9279fa49b1afd7a2",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "7621705eeb6349c6a621e8d250ab79aa",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "07104c7a32f5445ab4da689ba4ebe538",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "afb1cd4aa80d43d2962aeeaed28faf26",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "af1be1812848496bb1a0fb690d67bbe3",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0fac90a0a7464c99a651100df7d10343",
+    "task_id": "purchase-29108-003",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "21b65fc7032543e2bd40289fa85e5512",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "68a7f13a870a4ecda9d4b7b3b1a7fe3a",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3febd7128dac471a8e0d96f007ea29d7",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6a19de225ed84aa1975efc38165967d0",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1205e910c9664ffcbbac20bb3b26be66",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "87e2b288c1274bb4a105556b7d660b3b",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8e04598200b24db7b0e04ade395b2e16",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "78d046297ae540ad953d5dc2ef54e5a0",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0ce2ee7d9d9a4f9d80c1207bf4f9910f",
+    "task_id": "purchase-29108-004",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "fb5d0f61b73d4591ae79f08e2340bb22",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b21b7d4a79ea4bbc82e52a8ff9b9373b",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5c86229770414b48b4fe071a0d01c212",
+    "task_id": "purchase-29108-004",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c8c40b2839d74a08a627849c0acb894d",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "cc918bc1e15b4e928866588330135903",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0505b7101c6e4a0a979b7b7c02ad4840",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "65beb013033341a8a814ffdab994c260",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "eaa7199ecc8447b387e38cd7669da5a2",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a7e4304e6d7b40b09a3e6b0852fa8bdf",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f199f30050b441dba0038af8bb6ce62e",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "eb2e373aab9b4b4a9cbfa2714fa124fe",
+    "task_id": "purchase-29108-004",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6bdd5ffb7f1a4c718d0998e88cf07228",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "cabb1401894b48caa66c878da35363c0",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "15ad40651b62492fabc4b54f1d97f734",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "50dc08fbbf3a47aeb3756c4cea0fa2d0",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "55a56cb74f0d4999896f3a0fdb2d179d",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "152379452cb64ba6af3faa1ae02a2d31",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "cdc888944dcb4dada38190e833176a88",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8b484849bad249f0a2c077b68fa07532",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "214513bb2b7e4c6c95dee71dd3d165f7",
+    "task_id": "purchase-29108-005",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d9d73e08efa14ea9a260d90eeba18b4b",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0dfbe87ee5c94e029f85aec00a6efefe",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5ad30505c4754f37a33a13b0c61f14f3",
+    "task_id": "purchase-29108-005",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "fcaec1292f5a4e60b2d79b04a10666ba",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1049ccd88ce74d7f93c6a0930c19a173",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ad8c4bd5c93b4a46aeea66fc8f90efe8",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "8ffab35ef39e408982d92f8f1ef2ddee",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b9eac8c7cfed454eb8fa2cb7060d1aef",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8ab3c2e7a63b4feb8298fa3d2fca4ff7",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "99ce5110ca794e91a70d62667467dcba",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4117e004966946538e03db1447baf2ae",
+    "task_id": "purchase-29108-005",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "12826295e9d8452f8a78216c33baf687",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7731015f3f9d4e3a981f0205a613fcea",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6ee5ef82466644deb01ff25c3bc01715",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "19d929f8375b47b2a15da765a7fe3fe1",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "45f8a85c4a8a453c9a0cea78d5197591",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0f6b41708e40438481bae94b466fd2ef",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "d7db1f7c74c8466bb64b974d2abfbde9",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f28405e7adda4eb5a50b78db56a24d14",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4e3814bdd8a44f31ad9e2b0b6ec9b107",
+    "task_id": "purchase-29108-006",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "def6af96887e42b98cfc820304ebec82",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c77a2995b1e14df7961b4eb538072419",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c1def1d6add646848ec2ecc548ced126",
+    "task_id": "purchase-29108-006",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "345ae1653d3446c4bc47881f2fa27689",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3a4e4dc4f07b4d4481b7abcd4fbc6c9e",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "32bf0a0c9ed04029a4d8ff6c1e9a9299",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "e18ee5aece6140809a37c3dc3362565f",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "868f1fa9cd7b4007ae673c2f6d3fd54e",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "74dcadbdc8ad4aa8984b5b561d075b8e",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "acffd49661f44702b98ce487e5b122cf",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "561dfc6c8b76404ab5434decf8d17d23",
+    "task_id": "purchase-29108-006",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5195280933054287a1f88ed2eb8d693b",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2ba29999d1b647a3b8ec7447a5eaba32",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6b72dcefb1034690ab3701c1d398d7fa",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "aad4db14fdcd4403a6cfdb3b592b82a4",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "cec03bcd75134308bc9d607fdb72e0a5",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7fc25e6a4018414ea814a130d3b432ac",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "dfb161a74c3e4e789ec6d3cf61dbcd7d",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "823ead6520ea491c8e111df4876b888d",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d3a222b73cba4144aab5c1e387ba0198",
+    "task_id": "purchase-29108-007",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "03db66008caf4d978fe7c5bbe75b869a",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2cf0961d995045a1a2523775c1171f70",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2090749841c044cb8f032e96eda00592",
+    "task_id": "purchase-29108-007",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2134f93897484a28ae68dc45775094b7",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3528ae14a6fe4a0592ee0673d2f0925c",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2697bc8ec3e745d3a68d7c8cd7f419d8",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "78ca57faa1474cf5bdcb9275959bf4fc",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ab0731d12ca646b09356eae9d45c5754",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "60b51a0f8a6a42538dde71bb642710ce",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6ff35094665b493f8376816047ea4e06",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "58b3a90ab1d34978b726680aa932664e",
+    "task_id": "purchase-29108-007",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "eadccba651e1496d8038ca47cf09ca29",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b935ca293cfb4f29bafab38be0f44479",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b41208c783fc4a46991c92a58abc739e",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f1c044cebb384ae5a0a45b7a378288ed",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "bccff61e3ef045db83d19d52994e7fc8",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "830d71ebb328446a82181a6aa2927d6a",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "47586715686b424a849e88f266ffa78f",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6046dff051c44a07bcd4df5a903b8b25",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "78038f0d6d094f3393bc0de972e155ff",
+    "task_id": "purchase-29108-008",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9055ca785f2545c6be5f1482caeb25e6",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e478df2fd2e74e289620afd074ff9cd2",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c37d894b467b47fca6998c81b87bd521",
+    "task_id": "purchase-29108-008",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "27f84d02a9244a8aa53e91a9168b41e5",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c3f41df0c8974ccb91faf55853848481",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9fef48ee880b405688187a90632981b8",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "f046231175f94fe2830062cadf706316",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5ef0fb8b5f484bcab7a6584129d75b38",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7dfc99b605d54bdeb8e7020f9077907d",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5347756f759c4d5aa6c4857f23830379",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3325bce82b394cb39f69a20c22da4509",
+    "task_id": "purchase-29108-008",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "53409936924a4cfd8203affa1ff5db63",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b9d845f0229d4a6b856d6d0fe0bcbd6d",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0a5452070e114647b3c11035060f1a1c",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "a3feb6ec48a44c08b779c696268d372c",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4247a34350954db1abe3994bdafbd4b9",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2b221a6537814c4da9f77e30d0cab6b5",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "769333bd5c7648739ace41fef285b857",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "20ad778dc1ea4cbd8a8b6e3f3a7058a1",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "31ef1203c8d343d0aff562b8276efca3",
+    "task_id": "purchase-29108-009",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "452f7b099419443b9990c2f2fa8ea881",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9541794d0310439e9633d645c50c20f5",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "72d429309aea46d993686fcaa679d44b",
+    "task_id": "purchase-29108-009",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "81f28fb938f845d4b314077146855308",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9551b9e3d54a44718d87fa1c1d082f64",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4f874af3b1b1421fbe5c3ba59c86ba4c",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "5fbee57b92ff4395984405b93e64530f",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "178128c0ffcb4b81a950f5fa69d8d04c",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ad858898a0914a5d9ffcd530c4019d24",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f5880c6d41db400bbdd33cff78667461",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e0e16288da974e27b553d9dd89d6207a",
+    "task_id": "purchase-29108-009",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "00a4ea9a7bfb46f9b4b38044e6cb29d1",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7b0184d3217b4cf0ac5c299ae34c4b66",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "26d189d10ab841a2b549b0da2ee1a662",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "245e81ed29054119830d730db8a79099",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c05fecb11c5b40069b13cac908a14db8",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b3a0093b7c05429ca859018886427339",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c40fa43a551c48fcaf35670d442deb2f",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e41f78338b184ce3888b4fedb242dc8a",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e0b57acf5c4c435eacd15fcda2292284",
+    "task_id": "purchase-29108-010",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7dcbdcd1c8234e1ea4148a4ca9944ad7",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "10be68a7bd8f43aab46861ed75b633d0",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "aad31d91448a49078afb5f094661b780",
+    "task_id": "purchase-29108-010",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ed6027a02a5c4385b51a944c41edabed",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4d1e6f1e7e11419e8741364533eb6716",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3def6f1d5b39409c8d0890c6b36367f5",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "c2bed84760e34be5954d70148e56a290",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5e187db7d70342c98d7a3214cfd85649",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0ee00d54360a46b29613420286260900",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a53b4954d6634c7b8b30614cfe4844c0",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a39ebd99ed274504809463a2e1cc1226",
+    "task_id": "purchase-29108-010",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1afeafc0143444f4b5204a2d2074c594",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e725ccc3aaeb4f2d995584320e80f7a6",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2d32645c17414cbb811d3d38c767bd6a",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "63cb854d89184ea4a41849eb1f966d93",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "71a6b141d2f445eb9a2dd510693c870e",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "17fa559ef1b544a09dd7e260a298c87e",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "38575ae2a7aa485d9788eac3f06c1626",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0d5f98a4999b410a854cb052ac89dec5",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e1170a5a192b4858820f1775e4e9a9cb",
+    "task_id": "purchase-29108-011",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4f759f85288c4d23885d3dd7eb8e8749",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "986c0bc00cf94bec9a684bf7037d7f11",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "33e55e5f1039480b99c7c4b5e3abb8d6",
+    "task_id": "purchase-29108-011",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "10f58f0b58ae4ec4a69b80d48c9e0f70",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "da4c93b1d79b42229685af986ac5da8f",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2317dee479de48e58dcc76e49731d95d",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "36154f727ad84bd983bab13402f971c3",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e28c9a1814974caf972a2db017ad7f55",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "05d2cf20276f4238a2cb50acf2309bc9",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "02e0ea91bcb542a28226b36dde948bc3",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6ff263be43d94ef69a1b261306f32a14",
+    "task_id": "purchase-29108-011",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "89be2e91657c4c64b67b5789953e9aeb",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2dbe8567d0f04a729b46e30941e78e28",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "50602de332454fa4a3e4bc2108a0a490",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "ac60ef19d4e1429fb83656ce8f0bec4f",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "360c7fc9c643402a81a673eeb6d0c7bd",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a9445efbdc0a42bbad42499bd3e74dd8",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "a26d1261aa7f4cd2b98dd717f656b3a9",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "650f0a5b25f44677ad3f76ffb97c2c13",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "fcdf04b76ee34b1ea3df6b0951e7777c",
+    "task_id": "purchase-29108-012",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "51852bba616d49b386cd80dea268179e",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "510dec3bd140413e8d768d7df0a0e295",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e4947506b8ef4ba898a111958eac0497",
+    "task_id": "purchase-29108-012",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "9573211ffd0b47069d4199741195de15",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "07d4cf2b4be54c6b99a84a2ff7b4b770",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "12525a6f7a134905a3c23f8acabd1849",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "942d57dbc7124d4d9e546ff813d7ed10",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a07c1dc7abc6497f9c194d02cf2343ae",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "af2dcaa203dd46539bd909a90d88cc84",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "adcb2a7a29984626b3a1b7af044096f4",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2d24b5b159e2466e90de912647caeaa6",
+    "task_id": "purchase-29108-012",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "80bc0a1bb1714fe891a6cfe81527adf7",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2b5051150a344c399f1c3011f3d4248b",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a7270f427aa1490a8a849e43d0b13046",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "93add49ba3ef4be3b58dfdb353f0f46a",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "eec9d4ba7ea249dfb481b869938fa35f",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "175f7d3f7c144b6fa3f68db228068bf4",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c6ef746d78294a8d934197cb9e8ae01f",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "705f4a8c2d85467181128e464514b544",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d4b3b92f30ab4cdc9beae35a80e8539a",
+    "task_id": "purchase-29108-013",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "044c65cd99a64b0c9610529391c54a78",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "34bcdea4bdf94768b5bf1e83b2df2d69",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f48428de36e149f79426f96bd9b99bd0",
+    "task_id": "purchase-29108-013",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2e9538ca1f1a41758816dfb80b66b89f",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5fb743c7ec7e4ad9bcd89a077a350a96",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "721d1ac98816428b81c7e9b5dd874bbe",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "9d06824d12f043faaa95dce5b0611c14",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "fe350507de764641ae5cd931063b7177",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4ebfcc86b9d440b39e1889df76128e46",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "da8841b2e5ee43afa2cc7e7e2dfd03d5",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "45e29ed70a22427b9e716410a88949c8",
+    "task_id": "purchase-29108-013",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "affed3b4deda40e3949f619c4afce246",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3d7a1a23833a47dd81722a499e00ee63",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "fb1aace7d2824a5c8ab77116e0bb983d",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "50742ce611e84589b144a409d8477e09",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2d0bb55ef4504aae8f7eff36b3e2b9f1",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5fd054ac4ce543cfb7b2f06a220a07db",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "169ced4c533142c4bdc9fadb502d5a71",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4260f33aa3854137801ea44ac4057b27",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e63f5d9b405b46aa85a7fba12879f59b",
+    "task_id": "purchase-29108-014",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "81b9a5d28dc74eb8af610b32fb32e218",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "839354c878ca4c34a5230fd5899daef8",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "bc6421e8d2fd4625a1d5aa5d11ce7e8a",
+    "task_id": "purchase-29108-014",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "844f98c4647e4f3a9a94a651f6c0fc39",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "40d0c894367946998e88c28f28eb3826",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "97c81e3ae2c24e88b4070c94d5bcc8f3",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "18c68f6320e3464a8828c77a7fb548f7",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "85b7b026250345edacbb556fb6bfe911",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5372115878984e0baeffff6957bf9d91",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d75018133ea54192934ebf2c4152dd9c",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "bbbf1202137f42d3a0dd39387247ce7b",
+    "task_id": "purchase-29108-014",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8b6a42dd1bbc42daa2b91187b846b7a7",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1c097cceffcb40439de30efdea873d1c",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d4dfcea9bbe84dde8ff469301ef4f6c1",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "2cb528aa791a41999dfc19be2d8d69db",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a537f944c78a4928a3a1a7bfc88102d3",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0d609811aff14744a1b034d89aaab382",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "cf4cb50903f44e90aa8adf26aafc317b",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "18fafcb60d444fb58130c22b9b4806d6",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7c5cc7e9d61f4f2ba44043cea8e25b24",
+    "task_id": "purchase-29108-015",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "0027244b99184febb1433e2a8a2b006e",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "13e4f678c7444c02b8e266366adab0ad",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0435d2d76feb40d081430c309401ff83",
+    "task_id": "purchase-29108-015",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "945ec6789f074380849b36ae60752fe9",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2acbbe21afdb4f23bbf21b6786764f08",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "60eff2a5c5e44a7b97929cf7a6865cfb",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "555b30c905e74b8395ab28cd7ce0444c",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6683196ac3cf43f9937d036e3df83cd4",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7272d474ec094a0db9addabe3c9b484f",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "000cc26671804b15b0afdfdd7537fc3e",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "be9248c653b64424870894703ba00d81",
+    "task_id": "purchase-29108-015",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "77fc53d171ec469d837e69bb8612deb4",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c319d35bcf9149ae8da2cee95dbcd69c",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e64a27c24ec4415aa2b6799448e900b5",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e4769f239c8b441b9238e7fd2338135c",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ff3c8a7467c747a1ba745753fc09b278",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "217e1a70c715477297ebb90961dc6084",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0ae159c4324d408389433368aa8d47b1",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "49a2e04e810342b8b8f6f1efb826de37",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "121483ac4eca4cd0a5920f4b67b048dc",
+    "task_id": "purchase-29108-016",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "07ab5510cf4442b8a6e3ef8678e5aff6",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ec282ef11f2747d3a0ee967a9712fb79",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0dc73155f8824632a7ade7f28882ac25",
+    "task_id": "purchase-29108-016",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "be8763bab0894498a88bd714d35eb341",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7d06a67de77b471594b795f084c07ecf",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "fdd0d716c97a4e2a8776b0bebd8544fd",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "cf51bdcd107b49afbd09dae284d79777",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9f982f9b92734df58e103d230ede3c6a",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6efd230aa5f8475cb637abb1b50de6f0",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "991816894054445dbcc7ef2087742189",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c70068b36853420ba267623dd2a6990d",
+    "task_id": "purchase-29108-016",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1c9bf3a285204a6f8f3ff0ed3cca9e31",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7192c6286eab458f90fbe7920215abf2",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ccd6457120d641c59aef3d657cdc47c3",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ad9a92c1fe924f0abf03556bb1c3faed",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "735c4cd411fc4838987d3c4c3a4431ac",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9384fe06f2f941218ace596ffd1887a6",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "34c9689d449340a9ae9ef9cd3540966a",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "17caf2b3a8ac4498addc4c2ee0371e37",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f578f520d54c45e8844ac54197fb16c2",
+    "task_id": "purchase-29108-017",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "290a1bc8b64742f8ade0f717c84d6605",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "92c5dded4d0d44a79557f2a5664b8d81",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2a1051c7f04349fda705e9a2d03a5c4f",
+    "task_id": "purchase-29108-017",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f775c73ec59741029b5bfa2788ffe5be",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ee35fda6d93a49fca2d2bd75d9b481d0",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9be12ed5712d4f7883e32c74e833e196",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "017e5a02be8545c3bc6d7e01f581e400",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d7352d03aae84b079f58b83fbf5fcf04",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "17bacfaf7bc04721a04c739620a29d61",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9875344f74f74c8092754ff1422a0d15",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "273862633f2c4178ad92f170fdca77d6",
+    "task_id": "purchase-29108-017",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c1210e7b05c4426aa34c2dfba866fa16",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8d998ef6610d4b239fb1f80dfd628a01",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "836811a912214d459fd8d2b6833ecb22",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "40d6070e2d2b4b17a53f446606fbc5e7",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1afb6c004b594ad0a5f07ace6099db7c",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b7c4829159f24763a30eca6d8d288b00",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "2727ee4ba95f4346bb57ee591a73a90f",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1e44f22f97564fcd85cde0a91bc81c92",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "717bd18e19364a0ba38f7db3d7841967",
+    "task_id": "purchase-29108-018",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "301bbb3209144c04a596c1c92e6ac114",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "90ba82298aef44aca5579ea84cc60246",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c9314c9be7954ce3addba612078d6100",
+    "task_id": "purchase-29108-018",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "5a2a2c7de97e4ffba5e4fee10236b99c",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8087c3b040b241a0b6a51ba4beb59c33",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "647d77c2bfef424f8a9c4ec663924cd9",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "d7e935ace474449ea5f4349214ae282a",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4e66eb3595c14af98da3eedf9c00d8c6",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "507f8836f98041cf8dd9abfef1244412",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "bb465da582b642638b585b2b13047b94",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "53289d2434b54720b2a8acae57e8be69",
+    "task_id": "purchase-29108-018",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3a9f39836e6a4bd29ffefb63947545d2",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e79b29915fa14280b61a48568675184f",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d437f43b4c4a4d6a9cd08a84e1344984",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "42bab84d75264ba183ea7c5a5eb6fac8",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "bf07b74691e148fabd09b459a6d8d0ce",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2da556c7379f45648c147fc4ca2c9a4a",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "000d3a8c79614b33b677dc4e8ccc75f3",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a86813d52df841409be8ba66dfc1fbeb",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "dad5c3255dc14cd09333659eb8d2f7a1",
+    "task_id": "purchase-29108-019",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a91a4ebb30fd4a73a2231a916599a9c6",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7c249984720e4e2eb3c4c595233da1d0",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "0855fc31c7444ce487f431868174a026",
+    "task_id": "purchase-29108-019",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b5965e58e33a47778d9b7d4927385e17",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "8b12ed1531314bbe90f42ffbd3c968cc",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "e264923205544295b8c8f3b6bf3e997f",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "fc29452ac8804e198d9cbb8a23f7ceba",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b70832868fb44ec0a22b2fba09e96a93",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "307451e4a457426094ff730204a13ee7",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2196cd18845e4f7aad95b692f22e85d4",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4519124d9e9146b4b1b1fa282e8653a8",
+    "task_id": "purchase-29108-019",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "dfefe117875a4fc99ff7f5778247ce78",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "a543f337652c4883bff38ff48e059da7",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9fb856633d724b8a9d4963fcebea522b",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ae5ad89a643f48c88246e28888f37e2c",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "310e4b1754c94ce898a120ec0921e2c1",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "7a4e589b0c5d43fc9a20d5489642e27d",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5f394d974f4c447ab1bd748e273605fb",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c07be1c2c2234047aeeac36d577c79a8",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "11d31065d4374729b7240dc1c59481e8",
+    "task_id": "purchase-29108-020",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4d3510bd498445edaec9dca663d99da3",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "de2d74852bd54f07b3f39c4d7f56d216",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9b6d02b6aa4b4cba82b7a8e51886a66b",
+    "task_id": "purchase-29108-020",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f16450b8092849e7a9ed3ff4f7b6dc8f",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2d5d8bb8eaca47fb92f5a549e772eecd",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3ad3d141097d4069b6b9f194061f9132",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "497c33f41f684901ac6cfa552fb5ac9d",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "cf59d170462d4873b0fef647b5812c84",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b3f6f7a4b4a345e4aac7568fa2f908de",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "66cabb8a84674629b342b0eb81646191",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6e405ad4311c45cab3d09dd2f15c49e8",
+    "task_id": "purchase-29108-020",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "eb1cc9489d2c4d24962b6e76cbe08e54",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1026b09807f74a8797b209d7a1d3505f",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "aaa0c41c6cff4cd3be60e44e93761b2b",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "2cafdda9a6174fef801a4791b948f431",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "26d6e4033b77445686517b43fac8d03f",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "cf92e02c76c0471a89352717d597e820",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "eacd0ca1309b43b7a932528fd8591b9f",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "edd78e132cd94e20a235792dcaf3ed3c",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "9611980454294d818d6e9f1d4e5bb420",
+    "task_id": "purchase-29108-021",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "c4794719e6e64dbeba6efcf685ba4e64",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b9845ffaac3c482080c86a4ef057ded8",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "78ba5e81985a494f8cbcd24c99a55153",
+    "task_id": "purchase-29108-021",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "4e21a9e7c3804498a2b8a730f0eb8f61",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "41917ce346bf46ffbb52edbdaac4d2ce",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "83427748fbc34ff7be087cc1d4557fc8",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "9cd843797d394d7e9f52d4180b13f600",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1973dd8d45eb46efa50cfad1090f3135",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "658a3e76028140789595025781aebea3",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ab01402361a24e49b2d089e244dff9bf",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "54b311a8bcfa457788e44db880b8a4ee",
+    "task_id": "purchase-29108-021",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4b3a0794f4c643ce81f266ce50fa431c",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "950cfb2d4d4543aebed07e54f92e3500",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "1c5b97fb3464451fbe68f4939b54f6b7",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "87fe7b6efecf4e74b83b2b12dec8d68d",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "75f24485c8384107bf4b46d454c11799",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "65b60b7fba1a49f48569d040f77b8d12",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d7af84603def4f83be6c282c021c826f",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b0a478cffd1948dbbb52e478c41b3e2e",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "312d16bb3ac44bd2a55d42c9660c3b33",
+    "task_id": "purchase-29108-022",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "def56f49e2894e0e9f4bbbe5b2716ff8",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "00d3391d6d784b11baa819b35fedc3bf",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "154e74d83300496196996245e50cab3b",
+    "task_id": "purchase-29108-022",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b1322d47e8634cd88952f736a6496b3d",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2e25330e9fc04f25ab74e66ab3924ae2",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "4ebe9612c48347f6aafd4a31a309f51c",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "8d20c5d3e3d74b7eb55b5bf05aab34e5",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ed2ecd71dc8143e39683b267343b2ecf",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "88e63d3fb9604cee845c6afc00ea16ed",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "2a33b1c449204577927750d9960e6920",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3170edcb1df24f1f94c7144a0c528234",
+    "task_id": "purchase-29108-022",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "294da5c9bbb34899ae9d23fef3fe4ac8",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6243afbc629d499c810b3913fa9897b2",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b03c913130e946c7946d1992d8d4adc8",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "aa69a520542e4cfa89dee22ecb9d56c5",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "b2e3dbcefcbe4eaeac7340eef10c595f",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "459e04c900be4007af45cfa584f335a2",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "eff1d20f35394f59879c2d35a1a1cac7",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "42ece1cbc2a34c389fee7d59d14e9111",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d4482d1bf7f84ba2a10648756df89c6c",
+    "task_id": "purchase-29108-023",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "854db95db44246a1a02367765a6237fe",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "830698da8f7541509c8b1d0961278f18",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "6da17d7bbc3b4b909fb99d7a7d7511a5",
+    "task_id": "purchase-29108-023",
+    "error_type": "InjectedTimeout",
+    "diagnosis": "controlled_missing_output",
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "d75af2b1182b495b851413239c78a8e6",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "ceb9331784744329a9e38602b716fb90",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "c5cf33b717564094904b51e79227c904",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": false
+  },
+  {
+    "run_id": "936e1999e0b64503a53dbb437b367980",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "f31502c4161144d081570178a0dcb0d5",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "5f70e5b56b6b470d8d4089d6217a6eab",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "73f4bcc23cf443aaba351b7a0f08b50b",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  },
+  {
+    "run_id": "3e37fefcc6e04d208d4c48883f8e6883",
+    "task_id": "purchase-29108-023",
+    "error_type": null,
+    "diagnosis": null,
+    "physical_final_state_correct": true
+  }
+]

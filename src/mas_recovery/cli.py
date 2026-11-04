@@ -42,6 +42,13 @@ def main() -> None:
     suite.add_argument("--max-seconds", type=float, default=120)
     suite.add_argument("--max-total-tokens", type=int)
     suite.add_argument("--max-output-tokens", type=int, default=2048)
+    for command in (run, suite):
+        command.add_argument(
+            "--results-output",
+            type=Path,
+            default=Path("results"),
+            help="Compact report results directory (default: results)",
+        )
     args = parser.parse_args()
     load_dotenv(Path.cwd() / ".env", override=False)
     if args.command == "generate":
@@ -70,8 +77,12 @@ def main() -> None:
     def execute(backend, model=None):
         if args.command == "run":
             if model is None:
-                return run_experiment(config, task, backend, args.output)
-            return run_experiment(config, task, backend, args.output, model)
+                return run_experiment(
+                    config, task, backend, args.output, results_root=args.results_output
+                )
+            return run_experiment(
+                config, task, backend, args.output, model, results_root=args.results_output
+            )
         return run_suite(
             tasks,
             backend,
@@ -84,6 +95,7 @@ def main() -> None:
             max_seconds=args.max_seconds,
             max_total_tokens=args.max_total_tokens,
             max_output_tokens=args.max_output_tokens,
+            results_root=args.results_output,
         )
 
     try:
@@ -101,5 +113,7 @@ def main() -> None:
         path = getattr(error, "suite_dir", getattr(error, "run_dir", None))
         if path is not None:
             print(f"Interrupted; partial results: {path}", file=sys.stderr)
+            print(f"Compact results: {args.results_output / path.name}", file=sys.stderr)
         raise SystemExit(130) from None
     print(result)
+    print(f"Compact results: {args.results_output / result.name}")

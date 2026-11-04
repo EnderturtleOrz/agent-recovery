@@ -63,6 +63,20 @@ class Payload(Record):
     note: str = ""
 
 
+class PlanResponse(Record):
+    """Model-facing decision only; research belongs to the research artifact."""
+
+    value: int = Field(ge=0, strict=True)
+    product_id: str | None
+    supplier: str | None
+    quantity: int = Field(ge=0, strict=True)
+
+
+def plan_fields(payload: Payload) -> dict:
+    """Project decision fields without correcting any amount, identity or quantity."""
+    return payload.model_dump(include=set(PlanResponse.model_fields))
+
+
 class Usage(Record):
     model_calls: int = Field(default=0, ge=0, strict=True)
     input_tokens: int | None = Field(default=0, ge=0, strict=True)
